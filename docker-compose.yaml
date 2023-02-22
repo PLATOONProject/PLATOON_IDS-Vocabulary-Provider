@@ -1,0 +1,39 @@
+version: "3.4"
+
+services:
+
+  vocol-service:
+    container_name: vocol_service_container
+    image: vocimage:latest
+    build:
+      context: .
+      dockerfile: ./dockerfile-vocol
+      network: host
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+
+  fuseki_service:
+    container_name: fuseki_service_container
+    build:
+      context: .
+      dockerfile: ./dockerfile-fuseki
+      network: host
+    expose:
+      - 3030
+    ports:
+      - 3030:3030
+    
+
+  ids_messages_service:
+    container_name: ids_messages_container
+    build:
+      context: .
+      dockerfile: ./dockerfile-Messages
+    expose:
+      - 8080
+    ports:
+      - 8082:8080
+
+

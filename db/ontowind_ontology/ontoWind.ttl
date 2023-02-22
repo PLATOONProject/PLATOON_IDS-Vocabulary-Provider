@@ -1,0 +1,2977 @@
+@prefix : <http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://www.ics.forth.gr/example> .
+@prefix vb: <http://eresources.nlb.gov.sg/ID/NLBDM/vocab/> .
+@prefix NBN: <http://urn.fi/#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix esv: <http://eresources.nlb.gov.sg/ID/NLBDM/vocab-esv/> .
+@prefix j.0: <http://www.eurovision.com#> .
+@prefix ns1: <http://eresources.nlb.gov.sg/ID/NLBDM/marcext/> .
+@prefix ns2: <http://bibfra.me/vocab/marc/> .
+@prefix ns3: <http://eresources.nlb.gov.sg/ID/NLBDM/vocab-ccv/> .
+@prefix ns4: <http://bibfra.me/vocab/lite/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tmp: <http://www.semanticweb.org/maria/ontologies/2021/9/running_example#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix admin: <http://webns.net/mvcb/> .
+@prefix nlbdm: <http://eresources.nlb.gov.sg/ID/NLBDM/vocab/> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix PLCore: <http://www.perpetuallabs.io/ontologies/2021/9/PLCore#> .
+@prefix TypeQL: <http://www.perpetuallabs.io/ontologies/2021/9/TypeQL#> .
+@prefix schema: <http://schema.org/> .
+@prefix travel: <http://www.owl-ontologies.com/travel.owl#> .
+@prefix current: <http://erlangen-crm.org/current/> .
+@prefix ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+@prefix example: <http://www.ics.forth.gr/example#> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix mappings: <http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix Ontology1318785573683: <http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#> .
+@prefix REC-owl-semantics-20040210: <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#> .
+@base <http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl> .
+
+<http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#country
+
+:country rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#labelEN
+
+:labelEN rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#labelTR
+
+:labelTR rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#membershipValueLabel
+
+:membershipValueLabel rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#membershipValueLabelTR
+
+:membershipValueLabelTR rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#membershipValuesSynonymSet
+
+:membershipValuesSynonymSet rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#membershipValuesSynonymSetTR
+
+:membershipValuesSynonymSetTR rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#synonymSet
+
+:synonymSet rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#synonymSetTR
+
+:synonymSetTR rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#twitterAccount
+
+:twitterAccount rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#webAddress
+
+:webAddress rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#anemometer_measures
+
+:anemometer_measures rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:domain :Anemometer ;
+                     
+                     rdfs:range :WindSpeed ;
+                     
+                     rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#has
+
+:has rdf:type owl:ObjectProperty ;
+     
+     rdfs:range owl:Thing .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#humidity_sensor_measures
+
+:humidity_sensor_measures rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:range :Humidity ;
+                          
+                          rdfs:domain :HumiditySensor ;
+                          
+                          rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#measures
+
+:measures rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#met_tower_has
+
+:met_tower_has rdf:type owl:ObjectProperty ;
+               
+               rdfs:domain :MeteorologicalTower ;
+               
+               rdfs:range :Sensor ;
+               
+               rdfs:subPropertyOf :has .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#monitor_control_measures
+
+:monitor_control_measures rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:range :MeasuredPower ,
+                                     :TurbineStatus ;
+                          
+                          rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#plant_has
+
+:plant_has rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :MeteorologicalTower ;
+           
+           rdfs:domain :WindPowerPlant ;
+           
+           rdfs:range :WindTurbine ;
+           
+           rdfs:subPropertyOf :has .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#pressure_sensor_measures
+
+:pressure_sensor_measures rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:range :Pressure ;
+                          
+                          rdfs:domain :PressureSensor ;
+                          
+                          rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#solar_sensor_measures
+
+:solar_sensor_measures rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:range :SolarRadiation ;
+                       
+                       rdfs:domain :SolarRadiationSensor ;
+                       
+                       rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#temperature_sensor_measures
+
+:temperature_sensor_measures rdf:type owl:ObjectProperty ;
+                             
+                             rdfs:range :Temperature ;
+                             
+                             rdfs:domain :TemperatureSensor ;
+                             
+                             rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#turbine_has
+
+:turbine_has rdf:type owl:ObjectProperty ;
+             
+             rdfs:range :Blade ,
+                        :Gearbox ,
+                        :Generator ,
+                        :Hub ,
+                        :Nacelle ,
+                        :Rotor ,
+                        :Tower ,
+                        :TurbineStatus ;
+             
+             rdfs:domain :WindTurbine ;
+             
+             rdfs:subPropertyOf :has .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#wind_profiler_measures
+
+:wind_profiler_measures rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:range :WindDirection ;
+                        
+                        rdfs:domain :WindProfiler ;
+                        
+                        rdfs:range :WindSpeed ;
+                        
+                        rdfs:subPropertyOf :measures .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#wind_vane_measures
+
+:wind_vane_measures rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:range :WindDirection ;
+                    
+                    rdfs:domain :WindVane ;
+                    
+                    rdfs:subPropertyOf :measures .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#active_power
+
+:active_power rdf:type owl:DatatypeProperty ;
+              
+              :synonymSet "{real power}" ;
+              
+              rdfs:domain :WindPower ;
+              
+              rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#apparent_power
+
+:apparent_power rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :WindPower ;
+                
+                rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#capacity
+
+:capacity rdf:type owl:DatatypeProperty ;
+          
+          rdfs:domain :WindTurbine ;
+          
+          rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#capacity_factor
+
+:capacity_factor rdf:type owl:DatatypeProperty ;
+                 
+                 :synonymSet "{utilisation rate}" ;
+                 
+                 rdfs:domain :WindPowerPlant ;
+                 
+                 rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#cut-in_wind_speed
+
+:cut-in_wind_speed rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:domain :WindTurbine ;
+                   
+                   rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#cut-out_wind_speed
+
+:cut-out_wind_speed rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :WindTurbine ;
+                    
+                    rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#date
+
+:date rdf:type owl:DatatypeProperty ;
+      
+      rdfs:domain :FaultData ,
+                  :ForecastPower ,
+                  :HorizontalWindComponent ,
+                  :Humidity ,
+                  :MeasuredPower ,
+                  :Pressure ,
+                  :SolarRadiation ,
+                  :Temperature ,
+                  :TurbineStatus ,
+                  :Turbulence ,
+                  :U-component ,
+                  :V-component ,
+                  :VerticalWindComponent ,
+                  :WindDirection ,
+                  :WindShear ,
+                  :WindSpeed ;
+      
+      rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#direction
+
+:direction rdf:type owl:DatatypeProperty ;
+           
+           rdfs:domain :WindDirection ;
+           
+           rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#entsoe_code
+
+:entsoe_code rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :WindPowerPlant ;
+             
+             rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#error_rate
+
+:error_rate rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :ForecastPower ;
+            
+            rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#height
+
+:height rdf:type owl:DatatypeProperty ;
+        
+        rdfs:domain :HorizontalWindComponent ,
+                    :Humidity ,
+                    :Pressure ,
+                    :SolarRadiation ,
+                    :Temperature ,
+                    :Turbulence ,
+                    :U-component ,
+                    :V-component ,
+                    :VerticalWindComponent ,
+                    :WindDirection ,
+                    :WindShear ,
+                    :WindSpeed ;
+        
+        rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#hub_height
+
+:hub_height rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :WindTurbine ;
+            
+            rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#installed_capacity
+
+:installed_capacity rdf:type owl:DatatypeProperty ;
+                    
+                    :synonymSet "{rated capacity, nominal capacity, maximum effect, power capacity, nameplate capacity, wind power capacity}" ;
+                    
+                    rdfs:domain :WindPowerPlant ;
+                    
+                    rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#license_date
+
+:license_date rdf:type owl:DatatypeProperty ;
+              
+              rdfs:domain :WindPowerPlant ;
+              
+              rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#location
+
+:location rdf:type owl:DatatypeProperty ;
+          
+          rdfs:domain :WindPowerPlant ,
+                      :WindTurbine ;
+          
+          rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#model_output
+
+:model_output rdf:type owl:DatatypeProperty ;
+              
+              rdfs:domain :PhysicalModel ,
+                          :StatisticalModel ;
+              
+              rdfs:range xsd:anyURI .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#name
+
+:name rdf:type owl:DatatypeProperty ;
+      
+      rdfs:domain :WindPowerPlant ,
+                  :WindRelatedModel ;
+      
+      rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#number_of_blades
+
+:number_of_blades rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:domain :WindTurbine ;
+                  
+                  rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#number_of_turbines
+
+:number_of_turbines rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :WindPowerPlant ;
+                    
+                    rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#owner
+
+:owner rdf:type owl:DatatypeProperty ;
+       
+       rdfs:domain :WindPowerPlant ;
+       
+       rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#power_curve
+
+:power_curve rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :WindTurbine ;
+             
+             rdfs:range xsd:anyURI .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#rated_power
+
+:rated_power rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :WindTurbine ;
+             
+             rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#reactive_power
+
+:reactive_power rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :MeasuredPower ;
+                
+                rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#rotor_diameter
+
+:rotor_diameter rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :WindTurbine ;
+                
+                rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#speed
+
+:speed rdf:type owl:DatatypeProperty ;
+       
+       rdfs:domain :WindSpeed ;
+       
+       rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#swept_area
+
+:swept_area rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :WindTurbine ;
+            
+            rdfs:range xsd:double .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#type
+
+:type rdf:type owl:DatatypeProperty ;
+      
+      rdfs:domain :WindPowerPlant ;
+      
+      rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#value
+
+:value rdf:type owl:DatatypeProperty ;
+       
+       rdfs:domain :HorizontalWindComponent ,
+                   :Humidity ,
+                   :Pressure ,
+                   :SolarRadiation ,
+                   :Temperature ,
+                   :TurbineStatus ,
+                   :Turbulence ,
+                   :U-component ,
+                   :V-component ,
+                   :VerticalWindComponent ,
+                   :WindDirection ,
+                   :WindShear ,
+                   :WindSpeed ;
+       
+       rdfs:range xsd:double .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ALADIN
+
+:ALADIN rdf:type owl:Class ;
+        
+        rdfs:subClassOf :NumericalWeatherPrediction .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ALARO
+
+:ALARO rdf:type owl:Class ;
+       
+       rdfs:label "ALARO" ;
+       
+       rdfs:subClassOf :NumericalWeatherPrediction ;
+       
+       :labelEN "ALARO" ;
+       
+       :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ANFIS
+
+:ANFIS rdf:type owl:Class ;
+       
+       rdfs:label "ANFIS" ;
+       
+       rdfs:subClassOf :StatisticalModel ;
+       
+       :synonymSet "{adaptive neural fuzzy inference system}" ;
+       
+       :labelEN "ANFIS" ;
+       
+       :membershipValuesSynonymSet "{1.0}" ;
+       
+       :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ANN
+
+:ANN rdf:type owl:Class ;
+     
+     rdfs:label "ANN" ;
+     
+     rdfs:subClassOf :StatisticalModel ;
+     
+     :synonymSetTR "{yapay sinir aÄŸÄ±}" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :membershipValuesSynonymSetTR "{1.0}" ;
+     
+     :synonymSet "{artificial neural network}" ;
+     
+     :membershipValueLabelTR "0.1" ;
+     
+     :labelEN "ANN" ;
+     
+     :labelTR "YSA" ;
+     
+     :membershipValueLabel "0.1" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#AR
+
+:AR rdf:type owl:Class ;
+    
+    rdfs:label "AR" ;
+    
+    rdfs:subClassOf :StatisticalModel ;
+    
+    :synonymSet "{Autoregressive}" ;
+    
+    :membershipValueLabel "0.0" ;
+    
+    :labelEN "AR" ;
+    
+    :membershipValuesSynonymSet "{0.1}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ARIMA
+
+:ARIMA rdf:type owl:Class ;
+       
+       rdfs:label "ARIMA" ;
+       
+       rdfs:subClassOf :AR ;
+       
+       :labelEN "ARIMA" ;
+       
+       :membershipValuesSynonymSet "{0.1}" ;
+       
+       :membershipValueLabel "0.1" ;
+       
+       :synonymSet "{Autoregressive Integrated Moving Average}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ARMA
+
+:ARMA rdf:type owl:Class ;
+      
+      rdfs:label "ARMA" ;
+      
+      rdfs:subClassOf :AR ;
+      
+      :synonymSet "{Autoregressive Moving Average}" ;
+      
+      :membershipValuesSynonymSet "{0.1}" ;
+      
+      :membershipValueLabel "0.1" ;
+      
+      :labelEN "ARMA" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#AROME
+
+:AROME rdf:type owl:Class ;
+       
+       rdfs:label "AROME" ;
+       
+       rdfs:subClassOf :NumericalWeatherPrediction ;
+       
+       :membershipValuesSynonymSet "{1.0}" ;
+       
+       :synonymSet "{Applications of Research to Operations at MesoscalE}" ;
+       
+       :labelEN "AROME" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ARPEGE
+
+:ARPEGE rdf:type owl:Class ;
+        
+        rdfs:label "ARPEGE" ;
+        
+        rdfs:subClassOf :NumericalWeatherPrediction ;
+        
+        :synonymSet "{Action de Recherche Petite Echelle Grande Echelle}" ;
+        
+        :membershipValuesSynonymSet "{1.0}" ;
+        
+        :labelEN "ARPEGE" ;
+        
+        :membershipValueLabel "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ARPS
+
+:ARPS rdf:type owl:Class ;
+      
+      rdfs:label "ARPS" ;
+      
+      rdfs:subClassOf :NumericalWeatherPrediction ;
+      
+      :synonymSet "{Advanced Regional Prediction System}" ;
+      
+      :labelEN "ARPS" ;
+      
+      :membershipValueLabel "0.2" ;
+      
+      :membershipValuesSynonymSet "{1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ARX
+
+:ARX rdf:type owl:Class ;
+     
+     rdfs:label "ARX" ;
+     
+     rdfs:subClassOf :AR ;
+     
+     :synonymSet "{Autoregressive with Exogenous Input}" ;
+     
+     :membershipValuesSynonymSet "{0.1}" ;
+     
+     :labelEN "ARX" ;
+     
+     :membershipValueLabel "0.1" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ARXM
+
+:ARXM rdf:type owl:Class ;
+      
+      rdfs:label "ARXM" ;
+      
+      rdfs:subClassOf :AR ;
+      
+      :membershipValueLabel "0.1" ;
+      
+      :synonymSet "{Autoregressive with Exogenous Input and Multi-timescale Parameter}" ;
+      
+      :membershipValuesSynonymSet "{0.1}" ;
+      
+      :labelEN "ARXM" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Anemometer
+
+:Anemometer rdf:type owl:Class ;
+            
+            rdfs:label "Anemometer" ;
+            
+            rdfs:subClassOf :Sensor ;
+            
+            :membershipValueLabel "1.0" ;
+            
+            :labelEN "anemometer" ;
+            
+            :labelTR "anemometre" ;
+            
+            :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Blade
+
+:Blade rdf:type owl:Class ;
+       
+       rdfs:label "Blade" ;
+       
+       rdfs:subClassOf :WindRelatedStructuralComponent ;
+       
+       :labelTR "kanat" ;
+       
+       :membershipValuesSynonymSetTR "{1.0, 1.0}" ;
+       
+       :synonymSet "{turbine blade, wind turbine blade}" ;
+       
+       :membershipValueLabel "0.125" ;
+       
+       :membershipValuesSynonymSet "{1.0, 1.0}" ;
+       
+       :labelEN "blade" ;
+       
+       :synonymSetTR "{tÃ¼rbin kanadÄ±, rÃ¼zgar tÃ¼rbini kanadÄ±}" ;
+       
+       :membershipValueLabelTR "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Brake
+
+:Brake rdf:type owl:Class ;
+       
+       rdfs:label "Brake" ;
+       
+       rdfs:subClassOf :WindRelatedStructuralComponent ;
+       
+       :labelEN "brake" ;
+       
+       :labelTR "fren" ;
+       
+       :membershipValueLabel "0.0" ;
+       
+       :membershipValueLabelTR "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#CommercialWeatherForecastCompany
+
+:CommercialWeatherForecastCompany rdf:type owl:Class ;
+                                  
+                                  rdfs:label "CommercialWeatherForecastCompany" ;
+                                  
+                                  rdfs:subClassOf :WindRelatedOrganization ;
+                                  
+                                  :labelEN "commercial weather forecast company" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#CommercialWindEnergyCompany
+
+:CommercialWindEnergyCompany rdf:type owl:Class ;
+                             
+                             rdfs:label "CommercialWindEnergyCompany" ;
+                             
+                             rdfs:subClassOf :WindRelatedOrganization ;
+                             
+                             :labelEN "commercial wind energy company" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#CupAnemometer
+
+:CupAnemometer rdf:type owl:Class ;
+               
+               rdfs:label "CupAnemometer" ;
+               
+               rdfs:subClassOf :Anemometer ;
+               
+               :membershipValueLabel "1.0" ;
+               
+               :labelEN "cup anemometer" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#FaultData
+
+:FaultData rdf:type owl:Class ;
+           
+           rdfs:label "FaultData" ;
+           
+           rdfs:subClassOf :WindRelatedData ;
+           
+           :labelEN "fault data" ;
+           
+           :membershipValuesSynonymSetTR "{0.0}" ;
+           
+           :membershipValuesSynonymSet "{0.0}" ;
+           
+           :membershipValueLabel "0.0" ;
+           
+           :synonymSet "{event data}" ;
+           
+           :synonymSetTR "{olay verisi}" ;
+           
+           :labelTR "hata verisi" ;
+           
+           :membershipValueLabelTR "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ForecastPower
+
+:ForecastPower rdf:type owl:Class ;
+               
+               rdfs:label "ForecastPower" ;
+               
+               rdfs:subClassOf :WindPower ;
+               
+               :membershipValuesSynonymSetTR "{0.2, 0.2, 1.0, 1.0}" ;
+               
+               :membershipValueLabelTR "0.2" ;
+               
+               :synonymSet "{power forecast, power prediction, wind power forecast, wind power prediction}" ;
+               
+               :labelTR "tahmini gÃ¼Ã§" ;
+               
+               :labelEN "forecast power" ;
+               
+               :membershipValuesSynonymSet "{0.2, 0.2, 1.0, 1.0}" ;
+               
+               :membershipValueLabel "0.2" ;
+               
+               :synonymSetTR "{tahmin edilen gÃ¼Ã§, gÃ¼Ã§ tahmini, tahmin edilen rÃ¼zgar gÃ¼cÃ¼, rÃ¼zgar gÃ¼cÃ¼ tahmini}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#GFS
+
+:GFS rdf:type owl:Class ;
+     
+     rdfs:label "GFS" ;
+     
+     rdfs:subClassOf :NumericalWeatherPrediction ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :labelEN "GFS" ;
+     
+     :synonymSet "{Global Forecast System}" ;
+     
+     :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Gearbox
+
+:Gearbox rdf:type owl:Class ;
+         
+         rdfs:label "Gearbox" ;
+         
+         rdfs:subClassOf :WindRelatedStructuralComponent ;
+         
+         :labelEN "gearbox" ;
+         
+         :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Generator
+
+:Generator rdf:type owl:Class ;
+           
+           rdfs:label "Generator" ;
+           
+           rdfs:subClassOf :WindRelatedStructuralComponent ;
+           
+           :membershipValueLabelTR "0.5" ;
+           
+           :labelTR "jeneratÃ¶r" ;
+           
+           :membershipValueLabel "0.5" ;
+           
+           :labelEN "generator" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#GovernmentalEnergyOrganization
+
+:GovernmentalEnergyOrganization rdf:type owl:Class ;
+                                
+                                rdfs:label "GovernmentalEnergyOrganization" ;
+                                
+                                rdfs:subClassOf :NationalOrganization ;
+                                
+                                :labelEN "governmental energy organization" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#H-axisWindTurbine
+
+:H-axisWindTurbine rdf:type owl:Class ;
+                   
+                   rdfs:label "H-axisWindTurbine" ;
+                   
+                   rdfs:subClassOf :WindTurbine ;
+                   
+                   :labelEN "h-axis wind turbine" ;
+                   
+                   :membershipValueLabel "1.0" ;
+                   
+                   :synonymSet "{horizontal axis wind turbine, horizontal-axis wind turbine}" ;
+                   
+                   :membershipValuesSynonymSet "{1.0, 1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#HARMONIE
+
+:HARMONIE rdf:type owl:Class ;
+          
+          rdfs:label "HARMONIE" ;
+          
+          rdfs:subClassOf :NumericalWeatherPrediction ;
+          
+          :membershipValueLabel "1.0" ;
+          
+          :synonymSet "{HiRLAM Aladin Regional Mesoscale Operational NWP In Europe}" ;
+          
+          :labelEN "HARMONIE" ;
+          
+          :membershipValuesSynonymSet "{1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#HIRLAM
+
+:HIRLAM rdf:type owl:Class ;
+        
+        rdfs:label "HIRLAM" ;
+        
+        rdfs:subClassOf :NumericalWeatherPrediction ;
+        
+        :membershipValuesSynonymSet "{1.0}" ;
+        
+        :labelEN "HIRLAM" ;
+        
+        :synonymSet "{High Resolution Limited Area Model}" ;
+        
+        :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#HorizontalWindComponent
+
+:HorizontalWindComponent rdf:type owl:Class ;
+                         
+                         rdfs:label "HorizontalWindComponent" ;
+                         
+                         rdfs:subClassOf :WindData ;
+                         
+                         :labelEN "horizontal wind component" ;
+                         
+                         :membershipValueLabel "1.0" ;
+                         
+                         :labelTR "yatay rÃ¼zgar bileÅŸeni" ;
+                         
+                         :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Hub
+
+:Hub rdf:type owl:Class ;
+     
+     rdfs:label "Hub" ;
+     
+     rdfs:subClassOf :WindRelatedStructuralComponent ;
+     
+     :membershipValueLabel "0.0" ;
+     
+     :labelEN "hub" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Humidity
+
+:Humidity rdf:type owl:Class ;
+          
+          rdfs:label "Humidity" ;
+          
+          rdfs:subClassOf :MeteorologicalData ;
+          
+          :membershipValueLabel "0.1" ;
+          
+          :membershipValueLabelTR "0.1" ;
+          
+          :labelTR "nem" ;
+          
+          :labelEN "humidity" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#HumiditySensor
+
+:HumiditySensor rdf:type owl:Class ;
+                
+                rdfs:label "HumiditySensor" ;
+                
+                rdfs:subClassOf :Sensor ;
+                
+                :membershipValuesSynonymSetTR "{0.5}" ;
+                
+                :membershipValueLabel "0.5" ;
+                
+                :labelTR "nem sensÃ¶rÃ¼" ;
+                
+                :labelEN "humidity sensor" ;
+                
+                :membershipValueLabelTR "0.5" ;
+                
+                :synonymSetTR "{nem algÄ±layÄ±cÄ±}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#IFS
+
+:IFS rdf:type owl:Class ;
+     
+     rdfs:label "IFS" ;
+     
+     rdfs:subClassOf :NumericalWeatherPrediction ;
+     
+     :synonymSet "{Integrated Forecast System, ECMWF IFS}" ;
+     
+     :membershipValuesSynonymSet "{1.0, 1.0}" ;
+     
+     :labelEN "IFS" ;
+     
+     :membershipValueLabel "0.3" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#INCA
+
+:INCA rdf:type owl:Class ;
+      
+      rdfs:label "INCA" ;
+      
+      rdfs:subClassOf :NumericalWeatherPrediction ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :synonymSet "{Integrated Nowcasting through Comprehensive Analysis}" ;
+      
+      :labelEN "INCA" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#InternationalOrganization
+
+:InternationalOrganization rdf:type owl:Class ;
+                           
+                           rdfs:label "InternationalOrganization" ;
+                           
+                           rdfs:subClassOf :WindRelatedOrganization ;
+                           
+                           :labelEN "international organization" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#InternationalWeatherOrganization
+
+:InternationalWeatherOrganization rdf:type owl:Class ;
+                                  
+                                  rdfs:label "InternationalWeatherOrganization" ;
+                                  
+                                  rdfs:subClassOf :InternationalOrganization ;
+                                  
+                                  :labelEN "international weather organization" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#InternationalWindEnergyAssociation
+
+:InternationalWindEnergyAssociation rdf:type owl:Class ;
+                                    
+                                    rdfs:label "InternationalWindEnergyAssociation" ;
+                                    
+                                    rdfs:subClassOf :InternationalOrganization ;
+                                    
+                                    :labelEN "international wind energy association" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#LIDARSensor
+
+:LIDARSensor rdf:type owl:Class ;
+             
+             rdfs:label "LIDARSensor" ;
+             
+             rdfs:subClassOf :WindProfiler ;
+             
+             :membershipValueLabelTR "0.3" ;
+             
+             :membershipValueLabel "0.3" ;
+             
+             :labelTR "LIDAR sensÃ¶rÃ¼" ;
+             
+             :synonymSetTR "{LIDAR algÄ±layÄ±cÄ±}" ;
+             
+             :membershipValuesSynonymSetTR "{0.3}" ;
+             
+             :labelEN "LIDAR sensor" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MLP
+
+:MLP rdf:type owl:Class ;
+     
+     rdfs:label "MLP" ;
+     
+     rdfs:subClassOf :StatisticalModel ;
+     
+     :membershipValuesSynonymSet "{0.3}" ;
+     
+     :labelEN "MLP" ;
+     
+     :synonymSet "{Multilayer Perceptron}" ;
+     
+     :synonymSetTR "{Ã‡ok KatmanlÄ± AlgÄ±layÄ±cÄ±}" ;
+     
+     :membershipValueLabelTR "0.0" ;
+     
+     :membershipValuesSynonymSetTR "{0.3}" ;
+     
+     :labelTR "Ã‡KA" ;
+     
+     :membershipValueLabel "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MM5
+
+:MM5 rdf:type owl:Class ;
+     
+     rdfs:label "MM5" ;
+     
+     rdfs:subClassOf :NumericalWeatherPrediction ;
+     
+     :labelEN "MM5" ;
+     
+     :synonymSet "{Fifth-generation Mesoscale Model}" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MOS
+
+:MOS rdf:type owl:Class ;
+     
+     rdfs:label "MOS" ;
+     
+     rdfs:subClassOf :StatisticalModel ;
+     
+     :labelEN "MOS" ;
+     
+     :synonymSet "{Model Output Statistics}" ;
+     
+     :membershipValuesSynonymSetTR "{0.5}" ;
+     
+     :membershipValueLabel "0.1" ;
+     
+     :membershipValuesSynonymSet "{0.5}" ;
+     
+     :synonymSetTR "{Model Ã‡Ä±ktÄ± Ä°statistiÄŸi}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MeasuredPower
+
+:MeasuredPower rdf:type owl:Class ;
+               
+               rdfs:label "MeasuredPower" ;
+               
+               rdfs:subClassOf :WindPower ;
+               
+               :synonymSet "{measured wind power, wind power measurement}" ;
+               
+               :membershipValueLabel "0.2" ;
+               
+               :membershipValueLabelTR "0.2" ;
+               
+               :membershipValuesSynonymSetTR "{1.0, 1.0}" ;
+               
+               :labelEN "measured power" ;
+               
+               :membershipValuesSynonymSet "{1.0, 1.0}" ;
+               
+               :labelTR "Ã¶lÃ§Ã¼len gÃ¼Ã§" ;
+               
+               :synonymSetTR "{Ã¶lÃ§Ã¼len rÃ¼zgar gÃ¼cÃ¼, rÃ¼zgar gÃ¼cÃ¼ Ã¶lÃ§Ã¼mÃ¼}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MeteorologicalData
+
+:MeteorologicalData rdf:type owl:Class ;
+                    
+                    rdfs:label "MeteorologicalData" ;
+                    
+                    rdfs:subClassOf :WindRelatedData ;
+                    
+                    :labelEN "meteorological data" ;
+                    
+                    :labelTR "meteorolojik veri" ;
+                    
+                    :membershipValueLabelTR "1.0" ;
+                    
+                    :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MeteorologicalTower
+
+:MeteorologicalTower rdf:type owl:Class ;
+                     
+                     rdfs:label "MeteorologicalTower" ;
+                     
+                     rdfs:subClassOf :WindRelatedStructuralComponent ;
+                     
+                     :synonymSet "{met tower, wind mast, mast}" ;
+                     
+                     :membershipValuesSynonymSet "{1.0, 1.0, 0.0}" ;
+                     
+                     :labelTR "meteorolojik Ã¶lÃ§Ã¼m direÄŸi" ;
+                     
+                     :labelEN "meteorological tower" ;
+                     
+                     :membershipValueLabel "1.0" ;
+                     
+                     :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MinistryOfEnergy
+
+:MinistryOfEnergy rdf:type owl:Class ;
+                  
+                  rdfs:label "MinistryOfEnergy" ;
+                  
+                  rdfs:subClassOf :GovernmentalEnergyOrganization ;
+                  
+                  :membershipValueLabel "1.0" ;
+                  
+                  :membershipValueLabelTR "1.0" ;
+                  
+                  :labelEN "Ministry of Energy" ;
+                  
+                  :labelTR "Enerji BakanlÄ±ÄŸÄ±" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NAM
+
+:NAM rdf:type owl:Class ;
+     
+     rdfs:label "NAM" ;
+     
+     rdfs:subClassOf :NumericalWeatherPrediction ;
+     
+     :synonymSet "{North American Mesoscale Model}" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :labelEN "NAM" ;
+     
+     :membershipValueLabel "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Nacelle
+
+:Nacelle rdf:type owl:Class ;
+         
+         rdfs:label "Nacelle" ;
+         
+         rdfs:subClassOf :WindRelatedStructuralComponent ;
+         
+         :labelEN "nacelle" ;
+         
+         :membershipValueLabel "0.5" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NationalOrganization
+
+:NationalOrganization rdf:type owl:Class ;
+                      
+                      rdfs:label "NationalOrganization" ;
+                      
+                      rdfs:subClassOf :WindRelatedOrganization ;
+                      
+                      :labelEN "national organization" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NationalWeatherService
+
+:NationalWeatherService rdf:type owl:Class ;
+                        
+                        rdfs:label "NationalWeatherService" ;
+                        
+                        rdfs:subClassOf :GovernmentalEnergyOrganization ;
+                        
+                        :membershipValueLabelTR "1.0" ;
+                        
+                        :membershipValueLabel "1.0" ;
+                        
+                        :labelEN "national weather service" ;
+                        
+                        :labelTR "ulusal hava durumu servisi" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NationalWindEnergyAssociation
+
+:NationalWindEnergyAssociation rdf:type owl:Class ;
+                               
+                               rdfs:label "NationalWindEnergyAssociation" ;
+                               
+                               rdfs:subClassOf :NationalOrganization ;
+                               
+                               :labelEN "National Wind Energy Association" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NationalWindResearchOrganization
+
+:NationalWindResearchOrganization rdf:type owl:Class ;
+                                  
+                                  rdfs:label "NationalWindResearchOrganization" ;
+                                  
+                                  rdfs:subClassOf :NationalOrganization ;
+                                  
+                                  :labelEN "National Wind Research Organization" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NumericalWeatherPrediction
+
+:NumericalWeatherPrediction rdf:type owl:Class ;
+                            
+                            rdfs:label "NumericalWeatherPrediction" ;
+                            
+                            rdfs:subClassOf :WindRelatedModel ;
+                            
+                            :labelEN "numerical weather prediction" ;
+                            
+                            :membershipValueLabel "1.0" ;
+                            
+                            :membershipValuesSynonymSet "{1.0}" ;
+                            
+                            :synonymSetTR "{SHT}" ;
+                            
+                            :membershipValuesSynonymSetTR "{1.0}" ;
+                            
+                            :labelTR "sayÄ±sal hava tahmini" ;
+                            
+                            :synonymSet "{NWP}" ;
+                            
+                            :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#OffshoreWindPowerPlant
+
+:OffshoreWindPowerPlant rdf:type owl:Class ;
+                        
+                        rdfs:label "OffshoreWindPowerPlant" ;
+                        
+                        rdfs:subClassOf :WindPowerPlant ;
+                        
+                        :membershipValuesSynonymSet "{1.0}" ;
+                        
+                        :membershipValueLabel "1.0" ;
+                        
+                        :synonymSet "{offshore wind farm}" ;
+                        
+                        :labelEN "offshore wind power plant" ;
+                        
+                        :membershipValuesSynonymSetTR "{1.0, 1.0}" ;
+                        
+                        :labelTR "aÃ§Ä±k deniz rÃ¼zgar santrali" ;
+                        
+                        :synonymSetTR "{aÃ§Ä±k deniz rÃ¼zgar Ã§iftliÄŸi, aÃ§Ä±k deniz rÃ¼zgar enerji santrali}" ;
+                        
+                        :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#OnshoreWindPowerPlant
+
+:OnshoreWindPowerPlant rdf:type owl:Class ;
+                       
+                       rdfs:label "OnshoreWindPowerPlant" ;
+                       
+                       rdfs:subClassOf :WindPowerPlant ;
+                       
+                       :membershipValueLabelTR "1.0" ;
+                       
+                       :membershipValuesSynonymSetTR "{1.0, 1.0}" ;
+                       
+                       :synonymSet "{onshore wind farm}" ;
+                       
+                       :membershipValueLabel "1.0" ;
+                       
+                       :membershipValuesSynonymSet "{1.0}" ;
+                       
+                       :labelTR "karasal rÃ¼zgar santrali" ;
+                       
+                       :labelEN "onshore wind power plant" ;
+                       
+                       :synonymSetTR "{karasal rÃ¼zgar Ã§iftliÄŸi, karasal rÃ¼zgar enerji santrali}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#PSO
+
+:PSO rdf:type owl:Class ;
+     
+     rdfs:label "PSO" ;
+     
+     rdfs:subClassOf :StatisticalModel ;
+     
+     :membershipValuesSynonymSetTR "{0.3}" ;
+     
+     :synonymSetTR "{ParÃ§acÄ±k SÃ¼rÃ¼ Optimizasyonu}" ;
+     
+     :membershipValueLabel "0.1" ;
+     
+     :membershipValuesSynonymSet "{0.3}" ;
+     
+     :synonymSet "{Particle Swarm Optimization}" ;
+     
+     :labelEN "PSO" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#PhysicalModel
+
+:PhysicalModel rdf:type owl:Class ;
+               
+               rdfs:label "PhysicalModel" ;
+               
+               rdfs:subClassOf :WindPowerForecastModel ;
+               
+               :labelEN "physical model" ;
+               
+               :membershipValueLabel "0.0" ;
+               
+               :labelTR "fiziksel model" ;
+               
+               :membershipValueLabelTR "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Pressure
+
+:Pressure rdf:type owl:Class ;
+          
+          rdfs:label "Pressure" ;
+          
+          rdfs:subClassOf :MeteorologicalData ;
+          
+          :labelEN "pressure" ;
+          
+          :membershipValueLabelTR "0.1" ;
+          
+          :membershipValueLabel "0.1" ;
+          
+          :labelTR "basÄ±nÃ§" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#PressureSensor
+
+:PressureSensor rdf:type owl:Class ;
+                
+                rdfs:label "PressureSensor" ;
+                
+                rdfs:subClassOf :Sensor ;
+                
+                :membershipValuesSynonymSetTR "{0.5}" ;
+                
+                :labelEN "pressure sensor" ;
+                
+                :synonymSetTR "{basÄ±nÃ§ algÄ±layÄ±cÄ±}" ;
+                
+                :labelTR "basÄ±nÃ§ sensÃ¶rÃ¼" ;
+                
+                :membershipValueLabel "0.5" ;
+                
+                :membershipValueLabelTR "0.5" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#PropellerAnemometer
+
+:PropellerAnemometer rdf:type owl:Class ;
+                     
+                     rdfs:label "PropellerAnemometer" ;
+                     
+                     rdfs:subClassOf :Anemometer ;
+                     
+                     :membershipValueLabel "1.0" ;
+                     
+                     :labelEN "propeller anemometer" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#RADARSensor
+
+:RADARSensor rdf:type owl:Class ;
+             
+             rdfs:label "RADARSensor" ;
+             
+             rdfs:subClassOf :WindProfiler ;
+             
+             :membershipValueLabel "0.3" ;
+             
+             :labelEN "RADAR sensor" ;
+             
+             :labelTR "RADAR sensÃ¶rÃ¼" ;
+             
+             :membershipValuesSynonymSetTR "{0.3}" ;
+             
+             :synonymSetTR "{RADAR algÄ±layÄ±cÄ±}" ;
+             
+             :membershipValueLabelTR "0.3" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Rotor
+
+:Rotor rdf:type owl:Class ;
+       
+       rdfs:label "Rotor" ;
+       
+       rdfs:subClassOf :WindRelatedStructuralComponent ;
+       
+       :membershipValueLabel "0.2" ;
+       
+       :labelEN "rotor" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#SARIMA
+
+:SARIMA rdf:type owl:Class ;
+        
+        rdfs:label "SARIMA" ;
+        
+        rdfs:subClassOf :AR ;
+        
+        :membershipValueLabel "0.1" ;
+        
+        :synonymSet "{Seasonal Auto-Regression Integrated Moving Average}" ;
+        
+        :labelEN "SARIMA" ;
+        
+        :membershipValuesSynonymSet "{0.1}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#SODARSensor
+
+:SODARSensor rdf:type owl:Class ;
+             
+             rdfs:label "SODARSensor" ;
+             
+             rdfs:subClassOf :WindProfiler ;
+             
+             :synonymSetTR "{SODAR algÄ±layÄ±cÄ±}" ;
+             
+             :membershipValueLabel "0.3" ;
+             
+             :membershipValueLabelTR "0.3" ;
+             
+             :labelTR "SODAR sensÃ¶rÃ¼" ;
+             
+             :membershipValuesSynonymSetTR "{0.3}" ;
+             
+             :labelEN "SODAR sensor" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#SVM
+
+:SVM rdf:type owl:Class ;
+     
+     rdfs:label "SVM" ;
+     
+     rdfs:subClassOf :StatisticalModel ;
+     
+     :labelTR "DVM" ;
+     
+     :labelEN "SVM" ;
+     
+     :membershipValueLabel "0.1" ;
+     
+     :synonymSet "{support vector machine}" ;
+     
+     :membershipValuesSynonymSet "{0.1}" ;
+     
+     :membershipValueLabelTR "0.1" ;
+     
+     :membershipValuesSynonymSetTR "{0.1}" ;
+     
+     :synonymSetTR "{destek vektÃ¶r makinesi}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Sensor
+
+:Sensor rdf:type owl:Class ;
+        
+        rdfs:label "Sensor" ;
+        
+        rdfs:subClassOf :WindRelatedStructuralComponent ;
+        
+        :membershipValueLabel "0.3" ;
+        
+        :membershipValuesSynonymSetTR "{0.3}" ;
+        
+        :labelTR "algÄ±layÄ±cÄ±" ;
+        
+        :labelEN "sensor" ;
+        
+        :membershipValueLabelTR "0.3" ;
+        
+        :synonymSetTR "{sensÃ¶r}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#SolarRadiation
+
+:SolarRadiation rdf:type owl:Class ;
+                
+                rdfs:label "SolarRadiation" ;
+                
+                rdfs:subClassOf :MeteorologicalData ;
+                
+                :labelEN "solar radiation" ;
+                
+                :membershipValueLabelTR "0.1" ;
+                
+                :membershipValueLabel "0.1" ;
+                
+                :labelTR "gÃ¼neÅŸ Ä±ÅŸÄ±nÄ±mÄ±" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#SolarRadiationSensor
+
+:SolarRadiationSensor rdf:type owl:Class ;
+                      
+                      rdfs:label "SolarRadiationSensor" ;
+                      
+                      rdfs:subClassOf :Sensor ;
+                      
+                      :labelTR "gÃ¼neÅŸ Ä±ÅŸÄ±nÄ±mÄ± sensÃ¶rÃ¼" ;
+                      
+                      :membershipValueLabelTR "0.5" ;
+                      
+                      :labelEN "solar radiation sensor" ;
+                      
+                      :synonymSetTR "{gÃ¼neÅŸ Ä±ÅŸÄ±nÄ±mÄ± algÄ±layÄ±cÄ±}" ;
+                      
+                      :membershipValuesSynonymSetTR "{0.5}" ;
+                      
+                      :membershipValueLabel "0.5" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#SonicAnemometer
+
+:SonicAnemometer rdf:type owl:Class ;
+                 
+                 rdfs:label "SonicAnemometer" ;
+                 
+                 rdfs:subClassOf :Anemometer ;
+                 
+                 :labelEN "sonic anemometer" ;
+                 
+                 :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#StatisticalModel
+
+:StatisticalModel rdf:type owl:Class ;
+                  
+                  rdfs:label "StatisticalModel" ;
+                  
+                  rdfs:subClassOf :WindPowerForecastModel ;
+                  
+                  :membershipValueLabelTR "0.0" ;
+                  
+                  :labelEN "statistical model" ;
+                  
+                  :labelTR "istatistiksel model" ;
+                  
+                  :membershipValueLabel "0.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Temperature
+
+:Temperature rdf:type owl:Class ;
+             
+             rdfs:label "Temperature" ;
+             
+             rdfs:subClassOf :MeteorologicalData ;
+             
+             :membershipValueLabelTR "0.1" ;
+             
+             :membershipValueLabel "0.1" ;
+             
+             :labelTR "sÄ±caklÄ±k" ;
+             
+             :labelEN "temperature" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TemperatureSensor
+
+:TemperatureSensor rdf:type owl:Class ;
+                   
+                   rdfs:label "TemperatureSensor" ;
+                   
+                   rdfs:subClassOf :Sensor ;
+                   
+                   :membershipValueLabel "0.5" ;
+                   
+                   :membershipValueLabelTR "0.5" ;
+                   
+                   :membershipValuesSynonymSetTR "{0.5}" ;
+                   
+                   :synonymSetTR "{sÄ±caklÄ±k algÄ±layÄ±cÄ±}" ;
+                   
+                   :labelTR "sÄ±caklÄ±k sensÃ¶rÃ¼" ;
+                   
+                   :labelEN "temperature sensor" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Tower
+
+:Tower rdf:type owl:Class ;
+       
+       rdfs:label "Tower" ;
+       
+       rdfs:subClassOf :WindRelatedStructuralComponent ;
+       
+       :membershipValueLabelTR "0.0" ;
+       
+       :labelTR "kule" ;
+       
+       :membershipValueLabel "0.0" ;
+       
+       :labelEN "tower" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TransmissionSystemOperator
+
+:TransmissionSystemOperator rdf:type owl:Class ;
+                            
+                            rdfs:label "TransmissionSystemOperator" ;
+                            
+                            rdfs:subClassOf :GovernmentalEnergyOrganization ;
+                            
+                            :labelEN "transmission system operator" ;
+                            
+                            :labelTR "iletim sistemi operatÃ¶rÃ¼" ;
+                            
+                            :membershipValueLabel "1.0" ;
+                            
+                            :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TurbineStatus
+
+:TurbineStatus rdf:type owl:Class ;
+               
+               rdfs:label "TurbineStatus" ;
+               
+               rdfs:subClassOf :WindRelatedData ;
+               
+               :labelTR "tÃ¼rbin durumu" ;
+               
+               :labelEN "turbine status" ;
+               
+               :membershipValueLabel "1.0" ;
+               
+               :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#Turbulence
+
+:Turbulence rdf:type owl:Class ;
+            
+            rdfs:label "Turbulence" ;
+            
+            rdfs:subClassOf :WindData ;
+            
+            :labelEN "turbulence" ;
+            
+            :labelTR "tÃ¼rbÃ¼lans" ;
+            
+            :membershipValueLabelTR "1.0" ;
+            
+            :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#U-component
+
+:U-component rdf:type owl:Class ;
+             
+             rdfs:label "U-Component" ;
+             
+             rdfs:subClassOf :HorizontalWindComponent ;
+             
+             :labelTR "u bileÅŸeni" ;
+             
+             :membershipValueLabelTR "0.0" ;
+             
+             :labelEN "u-component" ;
+             
+             :membershipValuesSynonymSet "{0.0, 1.0, 1.0}" ;
+             
+             :membershipValuesSynonymSetTR "{0.0, 1.0, 1.0}" ;
+             
+             :membershipValueLabel "0.0" ;
+             
+             :synonymSet "{u component, wind u-component, wind u component}" ;
+             
+             :synonymSetTR "{u bileÅŸeni, rÃ¼zgarÄ±n u-bileÅŸeni, rÃ¼zgarÄ±n u bileÅŸeni}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#V-axisWindTurbine
+
+:V-axisWindTurbine rdf:type owl:Class ;
+                   
+                   rdfs:label "V-axisWindTurbine" ;
+                   
+                   rdfs:subClassOf :WindTurbine ;
+                   
+                   :membershipValueLabel "1.0" ;
+                   
+                   :membershipValuesSynonymSet "{1.0, 1.0}" ;
+                   
+                   :labelEN "v-axis wind turbine" ;
+                   
+                   :synonymSet "{vertical-axis wind turbine, vertical axis wind turbine}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#V-component
+
+:V-component rdf:type owl:Class ;
+             
+             rdfs:label "V-Component" ;
+             
+             rdfs:subClassOf :HorizontalWindComponent ;
+             
+             :membershipValuesSynonymSetTR "{0.0, 1.0, 1.0}" ;
+             
+             :membershipValueLabel "0.0" ;
+             
+             :synonymSetTR "{v bileÅŸeni, rÃ¼zgarÄ±n v-bileÅŸeni, rÃ¼zgarÄ±n v bileÅŸeni}" ;
+             
+             :labelEN "v-component" ;
+             
+             :membershipValuesSynonymSet "{0.0, 1.0, 1.0}" ;
+             
+             :membershipValueLabelTR "0.0" ;
+             
+             :synonymSet "{v component, wind v-component, wind v component}" ;
+             
+             :labelTR "v-bileÅŸeni" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#VerticalWindComponent
+
+:VerticalWindComponent rdf:type owl:Class ;
+                       
+                       rdfs:label "VerticalWindComponent" ;
+                       
+                       rdfs:subClassOf :WindData ;
+                       
+                       :membershipValueLabelTR "1.0" ;
+                       
+                       :membershipValueLabel "1.0" ;
+                       
+                       :labelEN "vertical wind component" ;
+                       
+                       :labelTR "dÃ¼ÅŸey rÃ¼zgar bileÅŸeni" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WRF
+
+:WRF rdf:type owl:Class ;
+     
+     rdfs:label "WRF" ;
+     
+     rdfs:subClassOf :NumericalWeatherPrediction ;
+     
+     :labelEN "WRF" ;
+     
+     :synonymSet "{Weather Research and Forecasting}" ;
+     
+     :membershipValueLabel "1.0" ;
+     
+     :membershipValuesSynonymSet "{1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindData
+
+:WindData rdf:type owl:Class ;
+          
+          rdfs:label "WindData" ;
+          
+          rdfs:subClassOf :MeteorologicalData ;
+          
+          :synonymSetTR "{rÃ¼zgar}" ;
+          
+          :membershipValueLabelTR "1.0" ;
+          
+          :membershipValueLabel "1.0" ;
+          
+          :labelEN "wind data" ;
+          
+          :membershipValuesSynonymSet "{1.0}" ;
+          
+          :membershipValuesSynonymSetTR "{1.0}" ;
+          
+          :labelTR "rÃ¼zgar verisi" ;
+          
+          :synonymSet "{wind}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindDirection
+
+:WindDirection rdf:type owl:Class ;
+               
+               rdfs:label "WindDirection" ;
+               
+               rdfs:subClassOf :WindData ;
+               
+               :labelEN "wind direction" ;
+               
+               :labelTR "rÃ¼zgar yÃ¶nÃ¼" ;
+               
+               :membershipValueLabelTR "1.0" ;
+               
+               :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindPower
+
+:WindPower rdf:type owl:Class ;
+           
+           rdfs:label "WindPower" ;
+           
+           rdfs:subClassOf :WindRelatedData ;
+           
+           :membershipValuesSynonymSetTR "{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.3, 0.3}" ;
+           
+           :labelTR "rÃ¼zgar gÃ¼cÃ¼" ;
+           
+           :membershipValuesSynonymSet "{1.0, 0.2, 0.2, 1.0, 1.0, 1.0, 1.0, 0.2, 0.3, 0.3}" ;
+           
+           :membershipValueLabelTR "1.0" ;
+           
+           :membershipValueLabel "1.0" ;
+           
+           :labelEN "wind power" ;
+           
+           :synonymSetTR "{rÃ¼zgar enerjisi, rÃ¼zgar enerjisi Ã¼retimi, rÃ¼zgar gÃ¼cÃ¼ Ã¼retimi, rÃ¼zgardan Ã¼retilen gÃ¼Ã§, rÃ¼zgardan Ã¼retilen enerji, rÃ¼zgardan Ã¼retim, rÃ¼zgar Ã¼retimi, yenilenebilir enerji, sÃ¼rdÃ¼rÃ¼lebilir enerji}" ;
+           
+           :synonymSet "{wind power generation, energy, generation, wind energy, wind generation, wind generated power, wind-generated power, electricity production, renewable energy, sustainable energy}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindPowerForecastModel
+
+:WindPowerForecastModel rdf:type owl:Class ;
+                        
+                        rdfs:label "WindPowerForecastModel" ;
+                        
+                        rdfs:subClassOf :WindRelatedModel ;
+                        
+                        :labelTR "rÃ¼zgar gÃ¼cÃ¼ tahmin modeli" ;
+                        
+                        :membershipValueLabel "1.0" ;
+                        
+                        :membershipValueLabelTR "1.0" ;
+                        
+                        :labelEN "wind power forecast model" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindPowerPlant
+
+:WindPowerPlant rdf:type owl:Class ;
+                
+                rdfs:label "WindPowerPlant" ;
+                
+                rdfs:subClassOf :WindRelatedStructuralComponent ;
+                
+                :membershipValueLabelTR "1.0" ;
+                
+                :labelTR "rÃ¼zgar enerji santrali" ;
+                
+                :synonymSet "{WPP, wind plant, wind energy plant, wind farm}" ;
+                
+                :membershipValueLabel "1.0" ;
+                
+                :membershipValuesSynonymSet "{1.0, 1.0, 1.0, 1.0}" ;
+                
+                :labelEN "wind power plant" ;
+                
+                :synonymSetTR "{RES, rÃ¼zgar santrali, rÃ¼zgar gÃ¼cÃ¼ santrali, rÃ¼zgar Ã§iftliÄŸi}" ;
+                
+                :membershipValuesSynonymSetTR "{1.0, 1.0, 1.0, 1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindProfiler
+
+:WindProfiler rdf:type owl:Class ;
+              
+              rdfs:label "WindProfiler" ;
+              
+              rdfs:subClassOf :Sensor ;
+              
+              :labelEN "wind profiler" ;
+              
+              :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindRelatedData
+
+:WindRelatedData rdf:type owl:Class ;
+                 
+                 rdfs:label "WindRelatedData" ;
+                 
+                 :labelEN "wind related data" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindRelatedModel
+
+:WindRelatedModel rdf:type owl:Class ;
+                  
+                  rdfs:label "WindRelatedModel" ;
+                  
+                  :membershipValueLabel "1.0" ;
+                  
+                  :labelEN "wind related model" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindRelatedOrganization
+
+:WindRelatedOrganization rdf:type owl:Class ;
+                         
+                         rdfs:label "WindRelatedOrganization" ;
+                         
+                         :labelEN "wind related organization" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindRelatedStructuralComponent
+
+:WindRelatedStructuralComponent rdf:type owl:Class ;
+                                
+                                rdfs:label "WindRelatedStructuralComponent" ;
+                                
+                                :labelEN "wind related structural component" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindShear
+
+:WindShear rdf:type owl:Class ;
+           
+           rdfs:label "WindShear" ;
+           
+           rdfs:subClassOf :WindData ;
+           
+           :membershipValuesSynonymSet "{1.0, 1.0}" ;
+           
+           :labelEN "wind shear" ;
+           
+           :membershipValueLabel "1.0" ;
+           
+           :synonymSet "{windshear, wind gradient}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindSpeed
+
+:WindSpeed rdf:type owl:Class ;
+           
+           rdfs:label "WindSpeed" ;
+           
+           rdfs:subClassOf :WindData ;
+           
+           :membershipValueLabel "1.0" ;
+           
+           :labelTR "rÃ¼zgar hÄ±zÄ±" ;
+           
+           :labelEN "wind speed" ;
+           
+           :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindTurbine
+
+:WindTurbine rdf:type owl:Class ;
+             
+             rdfs:label "WindTurbine" ;
+             
+             rdfs:subClassOf :WindRelatedStructuralComponent ;
+             
+             :labelEN "wind turbine" ;
+             
+             :membershipValueLabel "1.0" ;
+             
+             :membershipValuesSynonymSet "{0.5, 1.0, 1.0, 0.5}" ;
+             
+             :membershipValueLabelTR "1.0" ;
+             
+             :labelTR "rÃ¼zgar tÃ¼rbini" ;
+             
+             :synonymSet "{turbine, wind turbine generator, WTG, generator}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WindVane
+
+:WindVane rdf:type owl:Class ;
+          
+          rdfs:label "WindVane" ;
+          
+          rdfs:subClassOf :Sensor ;
+          
+          :labelEN "wind wane" ;
+          
+          :membershipValueLabel "1.0" ;
+          
+          :synonymSet "{weather vane, weather cock}" ;
+          
+          :membershipValuesSynonymSet "{1.0, 1.0}" .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#CENER
+
+:CENER rdf:type :NationalWindResearchOrganization ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "CENER" ;
+       
+       :twitterAccount "https://twitter.com/cener_energia" ;
+       
+       :webAddress "http://www.cener.com/" ;
+       
+       :labelEN "CENER" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :membershipValuesSynonymSet "{1.0, 1.0}" ;
+       
+       :country "es" ;
+       
+       :synonymSet "{Centro Nacional de EnergÃ­as Renovables, National Renewable Energy Center of Spain}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#DWD
+
+:DWD rdf:type :NationalWeatherService ,
+              owl:NamedIndividual ;
+     
+     rdfs:label "DWD" ;
+     
+     :labelEN "DWD" ;
+     
+     :synonymSet "{Deutscher Wetterdienst, German Meteorological Office}" ;
+     
+     :webAddress "http://www.dwd.de" ;
+     
+     :twitterAccount "https://twitter.com/dwd_presse" ;
+     
+     :membershipValuesSynonymSet "{1.0, 1.0}" ;
+     
+     :country "de" ;
+     
+     :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#ECMWF
+
+:ECMWF rdf:type :InternationalWeatherOrganization ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "ECMWF" ;
+       
+       :synonymSet "{European Centre for Medium-Range Weather Forecasts}" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :webAddress "https://www.ecmwf.int/" ;
+       
+       :membershipValuesSynonymSet "{1.0}" ;
+       
+       :labelEN "ECMWF" ;
+       
+       :twitterAccount "https://twitter.com/ecmwf" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#EPDK
+
+:EPDK rdf:type :GovernmentalEnergyOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "EPDK" ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :synonymSetTR "{Enerji PiyasasÄ± DÃ¼zenleme Kurumu}" ;
+      
+      :webAddress "http://www.epdk.org.tr" ;
+      
+      :country "tr" ;
+      
+      :synonymSet "{Energy Market Regulatory Authority}" ;
+      
+      :membershipValueLabelTR "1.0" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :membershipValuesSynonymSetTR "{1.0}" ;
+      
+      :labelEN "EMRA" ;
+      
+      :labelTR "EPDK" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#EPIAS
+
+:EPIAS rdf:type :NationalOrganization ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "EPIAS" ;
+       
+       :labelEN "EPIAS" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :membershipValueLabelTR "1.0" ;
+       
+       :synonymSetTR "{Enerji PiyasalarÄ± Ä°ÅŸletme Anonim Åžirketi}" ;
+       
+       :membershipValuesSynonymSetTR "{1.0}" ;
+       
+       :country "tr" ;
+       
+       :webAddress "https://www.epias.com.tr/" ;
+       
+       :labelTR "EPÄ°AÅž" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#EPRI
+
+:EPRI rdf:type :NationalWindResearchOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "EPRI" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :synonymSet "{Electric Power Research Institute}" ;
+      
+      :labelTR "EPRI" ;
+      
+      :labelEN "EPRI" ;
+      
+      :membershipValueLabelTR "1.0" ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :country "us" ;
+      
+      :webAddress "https://www.epri.com" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#EUAS
+
+:EUAS rdf:type :GovernmentalEnergyOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "EUAS" ;
+      
+      :labelTR "EÃœAÅž" ;
+      
+      :labelEN "EUAS" ;
+      
+      :webAddress "http://www.euas.gov.tr/" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :synonymSetTR "{Elektrik Ãœretim Anonim Åžirketi}" ;
+      
+      :membershipValueLabelTR "1.0" ;
+      
+      :membershipValuesSynonymSetTR "{1.0}" ;
+      
+      :country "tr" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#EWEA
+
+:EWEA rdf:type :InternationalWindEnergyAssociation ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "EWEA" ;
+      
+      :membershipValuesSynonymSet "{1.0, 1.0}" ;
+      
+      :twitterAccount "https://twitter.com/WindEurope" ;
+      
+      :synonymSet "{European Wind Energy Association, WindEurope}" ;
+      
+      :webAddress "https://windeurope.org/" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :labelEN "EWEA" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#IRENA
+
+:IRENA rdf:type :InternationalOrganization ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "IRENA" ;
+       
+       :membershipValuesSynonymSet "{1.0}" ;
+       
+       :webAddress "http://www.irena.org" ;
+       
+       :labelEN "IRENA" ;
+       
+       :twitterAccount "https://twitter.com/IRENA" ;
+       
+       :synonymSet "{International Renewable Energy Agency}" ;
+       
+       :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#JMA
+
+:JMA rdf:type :NationalWeatherService ,
+              owl:NamedIndividual ;
+     
+     rdfs:label "JMA" ;
+     
+     :membershipValueLabel "1.0" ;
+     
+     :synonymSet "{Japan Meteorological Agency}" ;
+     
+     :membershipValuesSynonymSetTR "{1.0}" ;
+     
+     :synonymSetTR "{Japon Meteoroloji AjansÄ±}" ;
+     
+     :labelTR "JMA" ;
+     
+     :country "jp" ;
+     
+     :labelEN "JMA" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :webAddress "http://www.jma.go.jp" ;
+     
+     :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#MGM
+
+:MGM rdf:type :NationalWeatherService ,
+              owl:NamedIndividual ;
+     
+     rdfs:label "MGM" ;
+     
+     :labelEN "TSMS" ;
+     
+     :labelTR "MGM" ;
+     
+     :webAddress "https://www.mgm.gov.tr" ;
+     
+     :synonymSetTR "{Meteoroloji Genel MÃ¼dÃ¼rlÃ¼ÄŸÃ¼}" ;
+     
+     :twitterAccount "https://twitter.com/meteoroloji_twi" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :membershipValuesSynonymSetTR "{1.0}" ;
+     
+     :membershipValueLabelTR "1.0" ;
+     
+     :membershipValueLabel "0.0" ;
+     
+     :synonymSet "{Turkish State Meteorological Service}" ;
+     
+     :country "tr" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NCAR
+
+:NCAR rdf:type :NationalWindResearchOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "NCAR" ;
+      
+      :webAddress "https://ncar.ucar.edu/" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :labelEN "NCAR" ;
+      
+      :synonymSet "{National Center for Atmospheric Research}" ;
+      
+      :country "us" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NCEP
+
+:NCEP rdf:type :GovernmentalEnergyOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "NCEP" ;
+      
+      :synonymSet "{National Centers for Environmental Prediction}" ;
+      
+      :country "us" ;
+      
+      :labelTR "NCEP" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :labelEN "NCEP" ;
+      
+      :webAddress "http://www.ncep.noaa.gov/" ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NERC
+
+:NERC rdf:type :InternationalOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "NERC" ;
+      
+      :labelEN "NERC" ;
+      
+      :membershipValuesSynonymSet "{0.1}" ;
+      
+      :synonymSet "{North American Electric Reliability Corporation}" ;
+      
+      :webAddress "http://www.nerc.com" ;
+      
+      :membershipValueLabel "0.1" ;
+      
+      :labelTR "NERC" ;
+      
+      :membershipValueLabelTR "0.1" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NHC
+
+:NHC rdf:type :NationalWeatherService ,
+              owl:NamedIndividual ;
+     
+     rdfs:label "NHC" ;
+     
+     :webAddress "http://www.nhc.noaa.gov/" ;
+     
+     :twitterAccount "https://twitter.com/NHC_Atlantic" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :membershipValueLabel "1.0" ;
+     
+     :labelEN "NHC" ;
+     
+     :country "us" ;
+     
+     :synonymSet "{National Hurricane Center}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NOAA
+
+:NOAA rdf:type :GovernmentalEnergyOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "NOAA" ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :synonymSetTR "{Ulusal Okyanus ve Atmosfer Dairesi}" ;
+      
+      :labelEN "NOAA" ;
+      
+      :twitterAccount "https://twitter.com/NOAA" ;
+      
+      :country "us" ;
+      
+      :webAddress "http://www.noaa.gov/" ;
+      
+      :membershipValueLabel "1.0" ;
+      
+      :membershipValuesSynonymSetTR "{1.0}" ;
+      
+      :synonymSet "{National Oceanic and Atmospheric Administration}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#NWS
+
+:NWS rdf:type :NationalWeatherService ,
+              owl:NamedIndividual ;
+     
+     rdfs:label "NWS" ;
+     
+     :country "us" ;
+     
+     :synonymSet "{National Weather Service}" ;
+     
+     :twitterAccount "https://twitter.com/NWS" ;
+     
+     :labelEN "NWS" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :webAddress "https://www.weather.gov/" ;
+     
+     :membershipValueLabel "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TCEnerjiBakanligi
+
+:TCEnerjiBakanligi rdf:type :MinistryOfEnergy ,
+                            owl:NamedIndividual ;
+                   
+                   rdfs:label "TCEnerjiBakanligi" ;
+                   
+                   :synonymSetTR "{Enerji BakanlÄ±ÄŸÄ±, Enerji ve Tabii Kaynaklar BakanlÄ±ÄŸÄ±, TÃ¼rkiye Cumhuriyeti Enerji ve Tabii Kaynaklar BakanlÄ±ÄŸÄ±}" ;
+                   
+                   :twitterAccount "https://twitter.com/tcenerji" ;
+                   
+                   :membershipValuesSynonymSetTR "{1.0, 1.0, 1.0}" ;
+                   
+                   :labelEN "Ministry of Energy and Natural Resources" ;
+                   
+                   :labelTR "T.C. Enerji ve Tabii Kaynaklar BakanlÄ±ÄŸÄ±" ;
+                   
+                   :webAddress "http://www.enerji.gov.tr" ;
+                   
+                   :membershipValueLabel "1.0" ;
+                   
+                   :country "tr" ;
+                   
+                   :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TEDAS
+
+:TEDAS rdf:type :GovernmentalEnergyOrganization ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "TEDAS" ;
+       
+       :labelEN "TEDAS" ;
+       
+       :membershipValueLabelTR "1.0" ;
+       
+       :country "tr" ;
+       
+       :labelTR "TEDAÅž" ;
+       
+       :synonymSetTR "{TÃ¼rkiye Elektrik DaÄŸÄ±tÄ±m Anonim Åžirketi}" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :membershipValuesSynonymSetTR "{1.0}" ;
+       
+       :webAddress "http://www.tedas.gov.tr/" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TEIAS
+
+:TEIAS rdf:type :TransmissionSystemOperator ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "TEIAS" ;
+       
+       :webAddress "https://www.teias.gov.tr" ;
+       
+       :synonymSetTR "{TÃ¼rkiye Elektrik Ä°letim Anonim Åžirketi}" ;
+       
+       :membershipValueLabelTR "1.0" ;
+       
+       :labelTR "TEÄ°AÅž" ;
+       
+       :labelEN "TEIAS" ;
+       
+       :country "tr" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :membershipValuesSynonymSetTR "{1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TETAS
+
+:TETAS rdf:type :GovernmentalEnergyOrganization ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "TETAS" ;
+       
+       :country "tr" ;
+       
+       :labelTR "TETAÅž" ;
+       
+       :synonymSetTR "{TÃ¼rkiye Elektrik Ticaret ve TaahhÃ¼t Anonim Åžirketi}" ;
+       
+       :membershipValuesSynonymSetTR "{1.0}" ;
+       
+       :webAddress "http://www.tetas.gov.tr" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :membershipValueLabelTR "1.0" ;
+       
+       :labelEN "TETAS" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#TUREB
+
+:TUREB rdf:type :NationalWindEnergyAssociation ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "TÃœREB" ;
+       
+       :synonymSet "{Turkish Wind Energy Association}" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :twitterAccount "https://twitter.com/tureb_twea" ;
+       
+       :membershipValuesSynonymSetTR "{1.0}" ;
+       
+       :labelTR "TÃœREB" ;
+       
+       :country "tr" ;
+       
+       :labelEN "TWEA" ;
+       
+       :membershipValueLabelTR "1.0" ;
+       
+       :membershipValuesSynonymSet "{1.0}" ;
+       
+       :synonymSetTR "{TÃ¼rkiye RÃ¼zgar Enerjisi BirliÄŸi}" ;
+       
+       :webAddress "http://www.tureb.com.tr/" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#USDoE
+
+:USDoE rdf:type :MinistryOfEnergy ,
+                owl:NamedIndividual ;
+       
+       rdfs:label "USDoE" ;
+       
+       :membershipValuesSynonymSetTR "{1.0}" ;
+       
+       :synonymSetTR "{A.B.D. Enerji BakanlÄ±ÄŸÄ±}" ;
+       
+       :country "us" ;
+       
+       :webAddress "https://energy.gov/" ;
+       
+       :membershipValueLabel "1.0" ;
+       
+       :labelTR "ABD Enerji BakanlÄ±ÄŸÄ±" ;
+       
+       :twitterAccount "https://twitter.com/ENERGY" ;
+       
+       :labelEN "U.S. Department of Energy" ;
+       
+       :synonymSet "{DoE, US DoE, Department of Energy}" ;
+       
+       :membershipValuesSynonymSet "{1.0, 1.0, 1.0}" ;
+       
+       :membershipValueLabelTR "1.0" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#WMO
+
+:WMO rdf:type :InternationalWeatherOrganization ,
+              owl:NamedIndividual ;
+     
+     rdfs:label "WMO" ;
+     
+     :membershipValueLabel "1.0" ;
+     
+     :synonymSet "{World Meteorological Organization}" ;
+     
+     :labelEN "WMO" ;
+     
+     :twitterAccount "https://twitter.com/wmo" ;
+     
+     :membershipValuesSynonymSet "{1.0}" ;
+     
+     :synonymSetTR "{DÃ¼nya Meteoroloji Ã–rgÃ¼tÃ¼, DÃ¼nya Meteoroloji TeÅŸkilatÄ±}" ;
+     
+     :webAddress "https://www.wmo.int/" ;
+     
+     :membershipValuesSynonymSetTR "{1.0, 1.0}" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl#YEGM
+
+:YEGM rdf:type :GovernmentalEnergyOrganization ,
+               owl:NamedIndividual ;
+      
+      rdfs:label "YEGM" ;
+      
+      :labelTR "YEGM" ;
+      
+      :synonymSet "{General Directorate of Renewable Energy}" ;
+      
+      :membershipValueLabelTR "1.0" ;
+      
+      :synonymSetTR "{Yenilenebilir Enerji Genel MÃ¼dÃ¼rlÃ¼ÄŸÃ¼}" ;
+      
+      :membershipValuesSynonymSet "{1.0}" ;
+      
+      :membershipValueLabel "0.0" ;
+      
+      :country "tr" ;
+      
+      :labelEN "GDRE" ;
+      
+      :membershipValuesSynonymSetTR "{1.0}" ;
+      
+      :webAddress "http://www.yegm.gov.tr/" .
+

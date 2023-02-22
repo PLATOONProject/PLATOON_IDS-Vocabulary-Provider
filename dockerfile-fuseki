@@ -1,0 +1,12 @@
+FROM vocimage:latest
+
+COPY ./apache-jena-fuseki /home/vocolProject/apache-jena-fuseki
+
+WORKDIR /home/vocolProject/apache-jena-fuseki
+
+CMD ./fuseki-server
+
+EXPOSE 3030
+
+ENV PORT=3030
+

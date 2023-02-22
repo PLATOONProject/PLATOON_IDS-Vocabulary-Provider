@@ -1,0 +1,54 @@
+{
+  "@context" : {
+    "ids" : "https://w3id.org/idsa/core/",
+    "idsc" : "https://w3id.org/idsa/code/"
+  },
+  "@type" : "ids:ConfigurationModel",
+  "@id" : "https://w3id.org/idsa/autogen/configurationModel/7672b568-7878-4f62-8032-5c73de969414",
+  "ids:configurationModelLogLevel" : {
+    "@id" : "idsc:MINIMAL_LOGGING"
+  },
+  "ids:connectorDeployMode" : {
+    "@id" : "idsc:TEST_DEPLOYMENT"
+  },
+  "ids:connectorDescription" : {
+    "@type" : "ids:BaseConnector",
+    "@id" : "https://w3id.org/idsa/autogen/baseConnector/7b934432-a85e-41c5-9f65-669219dde4ea",
+    "ids:outboundModelVersion" : "4.0.0",
+    "ids:inboundModelVersion" : [ "4.0.0" ],
+    "ids:securityProfile" : {
+      "@id" : "idsc:BASE_SECURITY_PROFILE"
+    },
+    "ids:description" : [ {
+      "@value" : "IDS Connector for hosting the messages for the Vocabulary Provider",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    } ],
+    "ids:version" : "@project.version@",
+    "ids:hasDefaultEndpoint" : {
+      "@type" : "ids:ConnectorEndpoint",
+      "@id" : "https://w3id.org/idsa/autogen/connectorEndpoint/711719ed-05fe-40c6-9137-62c7599d2367",
+      "ids:accessURL" : {
+        "@id" : "https://vocabulary.daekin.tecnalia.com:8080/api/ids/data"
+      }
+    },
+    "ids:title" : [ {
+      "@value" : "IDS Vocabulary Provider",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    } ],
+    "ids:curator" : {
+      "@id" : "https://www.tecnalia.com/"
+    },
+    "ids:maintainer" : {
+      "@id" : "https://www.tecnalia.com/"
+    }
+  },
+  "ids:trustStore" : {
+    "@id" : "file:///conf/DAEKIN_truststore_2.p12"
+  },
+  "ids:connectorStatus" : {
+    "@id" : "idsc:CONNECTOR_OFFLINE"
+  },
+  "ids:keyStore" : {
+    "@id" : "file:///conf/vocabulary_id_711719ed-05fe-40c6-9137-62c7599d2367.p12"
+  }
+}

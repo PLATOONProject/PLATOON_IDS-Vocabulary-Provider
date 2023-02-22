@@ -1,0 +1,3 @@
+
+SELECT DISTINCT ?concept WHERE { ?s a ?concept . } LIMIT 50
+https://gitlab.cc-asp.fraunhofer.de/fhg-isst-ids/ids-framework/-/wikis/Tutorials/Communicating-with-other-Connectors
