@@ -1,0 +1,2402 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "de", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/TR/2013/REC-prov-o-20130430/", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.loa-cnr.it/ontologies/DUL.owl", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/dc/terms", "https://w3id.org/i40/rami", "http://www.w3.org/2001/XMLSchema", "http://www.wurvoc.org/vocabularies/om-1.8" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "" : "http://www.semanticweb.org/owl/owlapi/turtle#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "iri" : "https://w3id.org/i40/rami#",
+    "version" : "0.4",
+    "author" : [ "https://www.linkedin.com/in/irl%C3%A1n-g-51766139/" ],
+    "comments" : {
+      "undefined" : "Update implementing the specifiations coming from 'Details of the Asset Administration Shell - Part 1: The exchange of information between partners in the value chain of Industrie 4.0 (Version 1.0)'"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/irl%C3%A1n-g-51766139/",
+        "type" : "iri"
+      } ],
+      "vocabulary" : [ {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/elements/1.1/",
+        "type" : "iri"
+      }, {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2000/01/rdf-schema#",
+        "type" : "iri"
+      }, {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2001/XMLSchema#",
+        "type" : "iri"
+      }, {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/sebastianrbader/",
+        "type" : "iri"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/i40/rami#",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "rami",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "rami",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An Ontology to represents the Reference Architecture Model for Industry 4.0 (RAMI), including the concept of the Administration Shell I4.0 Component.",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/i40/rami#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.4",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "104",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "33",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/i40/rami#ObjectAttributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObjectAttributes",
+      "undefined" : "Object Attributes"
+    },
+    "comment" : {
+      "en" : "A set of data elements that describe object attributes. These attributes need to refer to a data element within an existing submodel."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Dimension",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dimension"
+    },
+    "subClasses" : [ "13" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Key",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Key",
+      "undefined" : "Key"
+    },
+    "comment" : {
+      "en" : "A key is a reference to an element by its id."
+    },
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Asset",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "Objects may be known in the form of a type or of an instance. An object in the planning phase is known as a type",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Asset",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Entity",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "de",
+        "value" : "Entität",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Object",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Clearly identifiable asset for the Administration Shell",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "de",
+        "value" : "Eindeutig identifizierbarer Gegenstand, der aufgrund seiner Bedeutung in der Informationswelt verwaltet wird",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Asset"
+    },
+    "comment" : {
+      "en" : "An Asset describes meta data of an asset that is represented by an AAS.nThe asset may either represent an asset type or an asset instance.nThe asset has a globally unique identifier plus – if needed – additional domain specific (proprietary) identifiers."
+    },
+    "id" : "4",
+    "superClasses" : [ "40", "17", "41" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Property",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "TODO: delete?",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Property",
+      "en" : "Property"
+    },
+    "comment" : {
+      "en" : "A property is a data element that has a single value."
+    },
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#HasDataSpecification",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Data Specification",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HasDataSpecification",
+      "en" : "Has Data Specification"
+    },
+    "subClasses" : [ "9", "4", "23", "28", "26", "1" ],
+    "comment" : {
+      "en" : "Element that can have data specification templates. A template defines the additional attributes an element may or shall have."
+    },
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Referable",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "abstract",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Referable",
+      "en" : "Referable"
+    },
+    "subClasses" : [ "15", "1", "41" ],
+    "comment" : {
+      "en" : "An element that is referable by its idShort. This id is not globally unique. This id is unique within the name space of the element."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Security",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Security",
+      "undefined" : "Security"
+    },
+    "comment" : {
+      "en" : "Container for security relevant information of the AAS."
+    },
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Submodel",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Submodel",
+      "en" : "Submodel"
+    },
+    "comment" : {
+      "en" : "A Submodel defines a specific aspect of the asset represented by the AAS.nA submodel is used to structure the virtual representation and technical functionality of an Administration Shell into distinguishable parts. Each submodel refers to a well-defined domain or subject matter.nSubmodels can become standardized and thus become submodels types. Submodels can have different life-cycles."
+    },
+    "id" : "23",
+    "superClasses" : [ "40", "17", "41" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#SubmodelElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "abstract",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SubmodelElement",
+      "undefined" : "Submodel Element"
+    },
+    "subClasses" : [ "62", "63", "64", "65", "66" ],
+    "comment" : {
+      "en" : "A submodel element is an element suitable for the description and differentiation of assets."
+    },
+    "id" : "28",
+    "superClasses" : [ "40", "17", "41" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#HasKind",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HasKind",
+      "en" : "Has Kind"
+    },
+    "subClasses" : [ "4", "23", "28" ],
+    "comment" : {
+      "en" : "An element with a kind is an element that can either represent a type or an instance. Default for an element is that it is representing an instance."
+    },
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#File",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "File",
+      "en" : "FileDataElement"
+    },
+    "comment" : {
+      "en" : "A File is a data element that represents a file via its path description."
+    },
+    "id" : "67",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#DataSpecification",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "abstract",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataSpecification",
+      "en" : "DataSpecification"
+    },
+    "subClasses" : [ "74" ],
+    "comment" : {
+      "en" : "Element that can have data specification templates. A template defines the additional attributes an element may or shall have."
+    },
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#DataElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "abstract",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataElement",
+      "undefined" : "DataElement"
+    },
+    "subClasses" : [ "67", "77" ],
+    "comment" : {
+      "en" : "A data element is a submodel element that is not further composed out of other submodel elements. A data element is a submodel element that has a value. The type of value differs for different subtypes of data elements."
+    },
+    "id" : "63",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Operation",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Operation",
+      "en" : "Operation"
+    },
+    "comment" : {
+      "en" : "An operation is a submodel element with input and output variables."
+    },
+    "id" : "62",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#ConceptDescription",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "\"The AAS itself can also define its own dictionary that contains semantic definitions of its submodel elements. These semantic definitions are called concept descriptions (ConceptDescription). It is optional whether an AAS defines its own concept dictionary (ConceptDictionary) or not.\""
+    },
+    "label" : {
+      "IRI-based" : "ConceptDescription"
+    },
+    "id" : "26",
+    "superClasses" : [ "17", "41" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Blob",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Blob",
+      "en" : "BlobDataElement"
+    },
+    "comment" : {
+      "en" : "A BLOB is a data element that represents a file that is contained with its source code in the value attribute."
+    },
+    "id" : "77",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#ReferenceElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "A reference element is a data element that defines a reference to another element within the same or another AAS or a reference to an external object or entity."
+    },
+    "label" : {
+      "IRI-based" : "ReferenceElement",
+      "undefined" : "Reference Element"
+    },
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#AssetKind",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssetKind",
+      "en" : "Asset Kind"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/i40/rami#Type",
+      "baseIri" : "https://w3id.org/i40/rami",
+      "annotations" : {
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "undefined",
+          "value" : "Asset Type",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The RAMI4.0 model features one, generalized life-cycle axis, which was derived from IEC 62890. The basic idea is to distinguish for all assets within Industrie 4.0 between possible types and instance. This makes it possible to apply thentype/instance distinction for all elements such as material type/material instance, product type/product instance, machine type/ machine instance and more. Business related information will be handled on the 'Business' layer of thenRAMI4.0 model, as well, covering also order details and workflows, again with types/ instances."
+      },
+      "labels" : {
+        "IRI-based" : "Type",
+        "en" : "Type"
+      }
+    } ],
+    "comment" : {
+      "en" : "The RAMI4.0 model features one, generalized life-cycle axis, which was derived from IEC 62890. The basic idea is to distinguish for all assets within Industrie 4.0 between possible types and instance. This makes it possible to apply the type/instance distinction for all elements such as material type/material instance, product type/product instance, machine type/ machine instance and more. Business related information will be handled on the 'Business' layer of thenRAMI4.0 model, as well, covering also order details and workflows, again with types/ instances."
+    },
+    "id" : "13",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#View",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "de",
+        "value" : "https://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/hm-2018-trilaterale-coop.html",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sicht",
+      "IRI-based" : "View",
+      "en" : "View"
+    },
+    "comment" : {
+      "en" : "Different views associated to the Administration Shell via the Submodels"
+    },
+    "id" : "1",
+    "superClasses" : [ "2", "17" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Identifiable",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "abstract",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Identifiable",
+      "en" : "Identifiable"
+    },
+    "subClasses" : [ "9", "4", "23", "28", "26" ],
+    "comment" : {
+      "en" : "An element that has a globally unique identifier."
+    },
+    "id" : "41",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#ConceptDictionary",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptDictionary",
+      "undefined" : "Concept Dictionary"
+    },
+    "comment" : {
+      "en" : "A dictionary contains elements that can be reused. The concept dictionary contains concept descriptions. Typically a concept description dictionary of an AAS contains only concept descriptions of elements used within submodels of the AAS."
+    },
+    "id" : "15",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#OperationVariable",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "An operation variable is a submodel element that is used as input or output variable of an operation."
+    },
+    "label" : {
+      "IRI-based" : "OperationVariable",
+      "undefined" : "Operation Variable"
+    },
+    "id" : "64",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Order",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "TODO: Delete?",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Order",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Each order for manufacturing runs through a life cycle and its specifics necessarily have an impact on the production facility during performance of the order",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Order"
+    },
+    "id" : "114"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#PropertyValueType",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "The qualifier value is the value of the qualifier.nConstraint AASd-006: if both, the value and the valueId are present then the value needs to be identical to the short name of the referenced coded value in qualifierValueId."
+    },
+    "label" : {
+      "IRI-based" : "PropertyValueType"
+    },
+    "id" : "115"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Qualifier",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "A qualifier is a type-value pair that makes additional statements w.r.t. the value of the element."
+    },
+    "label" : {
+      "IRI-based" : "Qualifier",
+      "en" : "Qualifier"
+    },
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Formula",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "A formula is used to describe constraints by a logical expression."
+    },
+    "label" : {
+      "IRI-based" : "Formula",
+      "en" : "Formula"
+    },
+    "id" : "124"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#AdministrativeInformation",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AdministrativeInformation",
+      "undefined" : "Administrative Information"
+    },
+    "comment" : {
+      "en" : "Every Identifiable may have administrative information. Administrative information includes for examplen Information about the version of the elementn Information about who created or who made the last change to the elementn Information about the languages available in case the element contains text, for translating purposed also themmaster or default language may be definednIn the first version of the AAS metamodel only version information as defined by IEC 61360 is defined. In later versions additional attributes may be added."
+    },
+    "id" : "74",
+    "superClasses" : [ "73" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Value",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "maybe 'containedElement'?",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Value",
+      "en" : "Value"
+    },
+    "comment" : {
+      "en" : "Current value that can be specified through an instanced submodel (for ninstance in station 2) or through the asset, for example."
+    },
+    "id" : "87"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "104",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "111",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "113",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "33",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/i40/rami#Reference",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reference",
+      "undefined" : "Reference"
+    },
+    "comment" : {
+      "en" : "Reference to either a model element of the same or another AAs or to an external entity.nA reference is an ordered list of keys, each key referencing an element. The complete list of keys may for example be concatenated to a path that then gives unique access to an element or entity."
+    },
+    "id" : "135"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/i40/rami#AccessControlPolicyPoints",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AccessControlPolicyPoints",
+      "undefined" : "Access ControlPolicy Points"
+    },
+    "comment" : {
+      "en" : "Container for access control policy points."
+    },
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#SubmodelElementCollection",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubmodelElementCollection",
+      "en" : "SubmodelElementCollection"
+    },
+    "comment" : {
+      "en" : "A submodel element collection is a set or list of submodel elements."
+    },
+    "id" : "65",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#AdminShell",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "undefined",
+        "value" : "Verwaltungsschale",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Administration Shell",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Asset Administration Shell",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Describes the Administration Shell for Assets, Products, Components, e.g. Machines",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "This definition comprises material from RAMI4.0.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AdminShell",
+      "en" : "Admin Shell"
+    },
+    "id" : "9",
+    "superClasses" : [ "17", "41" ]
+  }, {
+    "iri" : "https://w3id.org/i40/rami#RelationshipElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "instances" : 0,
+    "description" : {
+      "en" : "A relationship element is used to define a relationship between two referable elements."
+    },
+    "label" : {
+      "IRI-based" : "RelationshipElement",
+      "en" : "RelationshipElement"
+    },
+    "id" : "66",
+    "superClasses" : [ "28" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#assetId",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "assetId",
+      "en" : "id"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "The unique identifier of an asset. Note the difference between the 'asset ID' idenitfier and the URIs for the resources."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#in",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "in"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "the rami:in attribute of rami:operation is the input parameter"
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#derivedFrom",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "derivedFrom",
+      "undefined" : "derived from"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "9",
+    "comment" : {
+      "en" : "This relation connects instances of AAS with their respective types. Refer to Asset Kind for further information of instance and type kinds."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "17",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "7",
+    "subproperty" : [ "10", "19", "20" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#targetObjectAttributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "targetObjectAttributes",
+      "undefined" : "targetObjectAttributes"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Target object attributes that need to be fulfilled so that the access permissions apply to the accessing subject."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "range" : "17",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "17",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "17",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "17",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#containedElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "containedElement",
+      "undefined" : "containedElement"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Referable elements that are contained in the view."
+    },
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#submodelElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "submodelElement",
+      "en" : "has Submodel Element"
+    },
+    "domain" : "33",
+    "comment" : {
+      "en" : "A submodel consists of zero or morensubmodel elements."
+    },
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "range" : "17",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#object",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "object",
+      "undefined" : "has object"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Element to which permission shall be assigned."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "range" : "12",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#isCaseOf",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isCaseOf"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasSubjectAttribute",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasSubjectAttribute",
+      "undefined" : "has subjectAttribute"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A data element that further classifies a specific subject."
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#qualifierType",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "qualifierType"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#id",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "id",
+      "en" : "identification"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A globally unique identifier which is NOT a URI."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#isConnectedTo",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "isConnectedTo",
+      "en" : "is Connected To"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Connects the Admin Shell with the different RAMI4.0 Dimensions"
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#publishedURL",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "publishedURL"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasIdType",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasIdType",
+      "en" : "has idType"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Type of the key value.nIn case of idType = idShort local shall be true.nIn case type=GlobalReference idType shall not be IdShort."
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#dependsOn",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "dependsOn",
+      "en" : "dependsOn"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A formula may depend on referable or even external global elements - assumed that can be referenced and their value may be evaluated - that are used in the logical expression."
+    },
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#version",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "version",
+      "en" : "version"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Version of the element."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasSubmodel",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "23",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "assetIdentificationModel",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubmodel",
+      "en" : "has Submodel"
+    },
+    "domain" : "4",
+    "subproperty" : [ "69" ],
+    "comment" : {
+      "en" : "Points to the Admin Shell to the Submodels that describe the Admin Shell of a given Asset"
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "range" : "41",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "41",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasConceptDescription",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasConceptDescription",
+      "en" : "has ConceptDescription"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "The semantics of a property or other elements that may have a semantic description is defined by a concept description.nThe description of the concept should follow a standardized schema (realized as data specification template)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "range" : "41",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "63",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "41",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#selectableEnvironmentAttributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "selectableEnvironmentAttributes",
+      "undefined" : "selectableEnvironmentAttributes"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Reference to a submodel defining which environment attributes can be accessed via the permission rules defined for the AAS, i.e. attributes that are not describing the asset itself.nDefault: reference to the submodel referenced viandefaultEnvironmentAttributes"
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "range" : "41",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#definition",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "definition",
+      "en" : "This is the definition that is contained in the conceptDescription.",
+      "undefined" : "has definition"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasKind",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasKind",
+      "en" : "has kind"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "range" : "63",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "73",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#idShort",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "idShort",
+      "en" : "idShort"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasView",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "1",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "view",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasView",
+      "en" : "has View"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Points to the differents views associated to the Administration Shell via the Submodels."
+    },
+    "attributes" : [ "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasValue",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "hasValue"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#semanticId",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "34",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has semantic ID",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "has Semantic Expression",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "semanticId",
+      "en" : "semanticId"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "The semantic id might refer to an external information source, which explains the formulation of the submodel (for example an PDF if a standard)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "88"
+  }, {
+    "range" : "40",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://purl.org/dc/terms/hasVersion",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasVersion"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "90"
+  }, {
+    "range" : "28",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#defaultPermissions",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "defaultPermissions",
+      "undefined" : "defaultPermissions"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Reference to a submodel defining the default permissions for the AAS."
+    },
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "range" : "28",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "40",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "40",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "28",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#logs",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "98",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "logs",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "logs"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "range" : "2",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "28",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "28",
+    "domain" : "63",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#inAccordanceWith",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "inAccordanceWith",
+      "en" : "in Accordance With"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "The Submodel is in accordance with a given standard specified in the STO ontology"
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#describes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "describes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "describes"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Connect the Asset with the Administration Shell"
+    },
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#contributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "104",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has Type Description",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Agent(Person or Software) that contributes to the Entity/Object related data. It correspond to the Contributor concept of OMM",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contributes"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#creationDate",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "108",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has Creator",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Date when an Agent(Person or Software) creates to the Entity/Object related data. It correspond to the Creator concept of OMM",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "creationDate"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasReference",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "hasReference",
+      "en" : "has Reference"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasLocal",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "111",
+    "label" : {
+      "IRI-based" : "hasLocal",
+      "undefined" : "has local"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Denotes if the key references a model element of the same AAS (=true) or not (=false). In case of local = false the key may reference a model element of another AAS or an entity outside any AAS that has a global unique id."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#isDescribedWith",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "113",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is Described With",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Points to the Standard used to describe a given object",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/i40/rami#asset",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isDescribedWith"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "112"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#mimeType",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://uri4uri.net/vocab.html/#MimetypeDatatype",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mimeType",
+      "undefined" : "mimeType"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Mime type of the content of the BLOB.nThe mime type states which file extension the file has.nValid values are e.g. “application/json”, “application/xls”, ”image/jpg”nThe allowed values are defined as in RFC2046.nornMime type of the content of the File."
+    },
+    "attributes" : [ "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasDataSpecification",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasDataSpecification",
+      "en" : "has Data Specification"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "7",
+    "comment" : {
+      "en" : "Global reference to the data specification template used by the element."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#administration",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "administration",
+      "en" : "has administration"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Administrative information of an identifiable element.nNote: Some of the administrative information like the version number mightnneed to be part of the identification."
+    },
+    "attributes" : [ "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf",
+    "baseIri" : "http://www.loa-cnr.it/ontologies/DUL.owl",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "is Part Of"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A relation between any entities, in this case, the Asset can be part of other Asset(s)."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#description",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "120",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has Description",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Description or comments on the element. The description can be provided in several languages."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom",
+    "baseIri" : "http://www.w3.org/TR/2013/REC-prov-o-20130430/",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "wasDerivedFrom"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "7",
+    "subproperty" : [ "8" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasDatatype",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "hasDatatype",
+      "en" : "has Datatype"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Points to the datatypes of the Submodels"
+    },
+    "attributes" : [ "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#conceptDictionary",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "conceptDictionary",
+      "undefined" : "has concept dictionary"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "An AAS max have one or more concept dictionaries assigned to it. The concept dictionaries typically contain only descriptions for elements that are also used within the AAS (via HasSemantics)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#value",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "value",
+      "undefined" : "keyValue"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "The key value, for example an IRDI if the idType=IRDI."
+    },
+    "attributes" : [ "object" ],
+    "id" : "126"
+  }, {
+    "iri" : "http://www.wurvoc.org/vocabularies/om-1.8/hasNumericalValue",
+    "baseIri" : "http://www.wurvoc.org/vocabularies/om-1.8",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasNumericalValue",
+      "en" : "has numerical value"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#defaultSubjectAttributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "defaultSubjectAttributes",
+      "undefined" : "defaultSubjectAttributes"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Reference to a submodel defining the default subjects attributes for the AAS that can be used to describe access permission rules.nThe submodel is of kind=Type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#defaultEnvironmentAttributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "defaultEnvironmentAttributes",
+      "undefined" : "defaultEnvironmentAttributes"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Reference to a submodel defining default environment attributes, i.e. attributes that are not describing the asset itself.nThe submodel is of kind=Type.nAt the same type the values of these environment attributes need to be accessible when evaluating the access permission rules. This is realized as a policy information point."
+    },
+    "attributes" : [ "object" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#hasKey",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasKey",
+      "undefined" : "has Key"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Unique reference in its name space."
+    },
+    "attributes" : [ "object" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#trustAnchor",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "trustAnchor",
+      "undefined" : "trustAnchor"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Trust anchor of AAS, typically certificates."
+    },
+    "attributes" : [ "object" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#second",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "second",
+      "undefined" : "second"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Second element in the relationship taking the role of the object."
+    },
+    "attributes" : [ "object" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#revision",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "revision",
+      "en" : "revision"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Revision of the element. Constraint AASd-005: A revision requires a version. This means, if there is no version there is no revision neither."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#dataElement",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "dataElement",
+      "en" : "dataElement"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A data element is a submodel element that is not further composed out of other submodel elements.nA data element is a submodel element that has a value. The type of value differs for different subtypes of data elements."
+    },
+    "attributes" : [ "object" ],
+    "id" : "134"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#first",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "first",
+      "undefined" : "first"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "First element in the relationship taking the role of the subject."
+    },
+    "attributes" : [ "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#asset",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "asset",
+      "en" : "asset"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The asset the AAS is representing."
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#ordered",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "ordered",
+      "undefined" : "ordered"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "If ordered=false then the elements in the property collection are not ordered. If ordered=true then the elements in the collection are ordered.nDefault = false"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#assetIdentificationModel",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "assetIdentificationModel",
+      "undefined" : "has Asset Identification Model"
+    },
+    "superproperty" : [ "68" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "A reference to a Submodel that defines the handling ofnadditional domain specific (proprietary) Identifiers fornthe asset like e.g. serial number etc."
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#qualifierValue",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "qualifierValue"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "The qualifier value is the value of the qualifier.nConstraint AASd-006: if both, the value and the valueId are present then the value needs to be identical to the short name of the referenced coded value in qualifierValueId."
+    },
+    "attributes" : [ "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#allowDuplicates",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "47",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "allow duplicates",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "allowDuplicates"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "If allowDuplicates=true then it is allowed that the collection contains the same element several times.nDefault = false"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#objectAttribute",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "objectAttribute",
+      "undefined" : "objectAttribute"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A data element that further classifies an object."
+    },
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#targetSubjectAttributes",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "targetSubjectAttributes",
+      "undefined" : "targetSubjetAtrtibutes"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Target subject attributes that need to be fulfilled by the accessing subject to get the permissions defined by this rule."
+    },
+    "attributes" : [ "object" ],
+    "id" : "142"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#out",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "out",
+      "en" : "out"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "out is the output paramter of the Operation"
+    },
+    "attributes" : [ "object" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#parent",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "parent",
+      "en" : "parent"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Reference to the next referable parent element of the element. Constraint AASd-004: Add parent in case of non-identifiable elements.nNote: This element is used to ease navigation in the model and thus it enables more performant"
+    },
+    "attributes" : [ "object" ],
+    "id" : "145"
+  }, {
+    "iri" : "https://w3id.org/i40/rami#preferredName",
+    "baseIri" : "https://w3id.org/i40/rami",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "preferredName",
+      "undefined" : "preferredName"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "This is the preferredName of a ConceptDescription object"
+    },
+    "attributes" : [ "object" ],
+    "id" : "146"
+  } ]
+}

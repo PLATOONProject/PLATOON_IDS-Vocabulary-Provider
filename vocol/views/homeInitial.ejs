@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+  <title>
+    <%- title %>
+  </title>
+  <link rel="stylesheet" href="./highlight/styles/default.css">
+  <link href="dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css">
+  <link href="dist/vis-network.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./javascripts/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./javascripts/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./stylesheets/bootstrap-treeview.min.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/dataTables.min.css">
+  <link rel="stylesheet" href="./semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/yasqe.min.css">
+  <link href="./stylesheets/mTab-style.css" type="text/css" rel="stylesheet" />
+  <script src="dist/vis.min.js"></script>
+  <script src="./javascripts/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./javascripts/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./semantic/dist/semantic.min.js"></script>
+  <script src="./javascripts/jquery-mTab-min.js"></script>
+  <script src="./javascripts/yasqe.bundled.js"></script>
+  <script src="./javascripts/bootstrap-treeview.min.js"></script>
+  <script src="./javascripts/lodash.js"></script>
+  <script type="text/javascript" src="./javascripts/datatables.min.js"></script>
+  <script src="./highlight/highlight.pack.js"></script>
+  <script src="./javascripts/d3sparql/d3sparql.js"></script>
+  <script src="./javascripts/d3sparql/queries.js"></script>
+  <script src="./javascripts/d3sparql/lib/d3/d3.v3.min.js"></script>
+
+</head>
+
+<body>
+
+<h2 class="ui center aligned icon header" style="margin-top: 5%;">
+    <i class="orange circular clone icon"></i>
+    Platoon Vocabulary Provider
+</h2>
+</div>
+<div class="ui container">
+    <div class="ui two column grid" style="margin-bottom: 80px;">
+        <div class="column">
+            <div class="ui card" style="width: 480px">
+                <div class="content">
+
+                    <div class="header"> <i class=" glyphicon glyphicon-th-list"></i> Select an ontology </div>
+                </div>
+                <div class="content">
+                    <div class="ui large feed">
+                        <div id="listOntologyOnSearch" class="ui fluid search">
+                            <div class="ui icon input">
+                                <select class="form-control large" id="ontologyList" onchange="selectDataset()" style="width: 450px">
+				  <option>Default select</option>
+		                </select>
+
+                            </div>
+                            <div class="results" style="width: fit-content;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui big divided list">
+		 </div>
+            </div>
+            
+            </table>
+        </div>
+        <div class="column">
+		<div class="ui card" style="width: 480px">
+		        <div class="content">
+		            <div class="header">  Search for a term <i class=" glyphicon glyphicon-tags"></i></div>
+		        </div>
+		        <div class="content">
+		            <div class="ui large feed">
+		                <div id="listConceptOnSearch" class="ui fluid  search">
+		                    <div class="ui   icon  input">
+		                        <input id="searchConcept" class="prompt" type="text" placeholder="Search..."
+		                            style="width: 450px">
+		                        <i class="search icon"></i>
+		                    </div>
+		                    <div id="search_results" class="results" style="width: fit-content;"></div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="ui big divided list">
+		        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form action="./home" method="post" id="dataset_selection">
+      <input type="hidden" id="datasetName" name="datasetName"/>
+</form>
+
+
+<script>
+var selectedOntology = "";
+function selectDataset()
+{
+	
+	console.log('CHANGE'+"<%= dataset.name%>");
+	selected_dataset = document.getElementById('ontologyList').value;
+	document.getElementById('datasetName').value=selected_dataset;
+
+	document.forms["dataset_selection"].submit();
+	//window.location.href = document.URL.split('#')[0] + 'home';
+}
+
+//Search ther term in all the classes of the existing datasets
+function search_term()
+{
+	//Obtain the exisitng datasets
+	var valor= "<%= datasets %>"
+  	valor=valor.substring(1, valor.length);
+	//Split the string in datasets
+	array_datasets= valor.split(",/");
+	var response={results:[]};
+
+	var total_results=[];
+	for (var i=0; i< array_datasets.length; i++)
+	{
+		
+		searchTermDatasetsRETURN(array_datasets[i]).then(function (res) {
+			response = res;
+			if(response.results.length > 0)
+			{
+				console.log("longitud="+response.results.length);
+				console.log("valor recogido="+response.results[0].title);
+				total_results=total_results.concat(response.results);
+				document.getElementById('search_results').innerHTML+="resultados-"+response.results[0].title;
+			}
+			
+			
+		    })
+	}
+
+}
+
+  	//The first thing to do is to fill the list of ontologies
+  	var valor= "<%= datasets %>"
+  	valor=valor.substring(1, valor.length);
+	//Split the string in datasets
+	array_datasets= valor.split(",/");
+
+	ontology_list = document.getElementById('ontologyList');
+	for (var i=0; i< array_datasets.length; i++)
+	{
+		ontology_list.add(new Option(array_datasets[i], array_datasets[i]));
+	}
+	
+    var limitQueryValue = 20;
+    console.log('EWNTRA SOLO');
+    var Statistics = "";
+    var graphListsWithBranches = [];
+    var allNamedGraphsQuery = "";
+    var toBeHiddenInstances = [];
+    var statisticsQuery =
+        "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \
+      PREFIX owl: <http://www.w3.org/2002/07/owl#> \
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\
+      PREFIX vmo:   <http://vocol.fraunhofer.de/vmo/>\
+      PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>\
+      SELECT \
+      (count(?cls) as ?Classes)\
+      (count(?rdfProperty) as ?RDF_Property)\
+      (count(?objProp) as ?OWL_ObjectProperty) \
+      (count(?dtProp) as ?OWL_DatatypeProperty) \
+      (count(?annot) as ?OWL_AnnotationProperty)\
+      (count(?indiv) as ?Individuals)\
+      (count(?s) as ?Instances)\
+      WHERE {{\
+        { select distinct ?instance where{\
+     ?ins a vmo:VoColInstance;        ?p ?o .  \
+    FILTER contains(str(?o),'Running' )    \
+    FILTER NOT EXISTS { GRAPH ?g { ?ins a vmo:VoColInstance. } }  \
+        FILTER NOT EXISTS { ?ins vmo:hasPrivateAccess true .        } \
+        bind(afn:localname(?ins)	 as ?instance). }}\
+      GRAPH ?g {{?objProp a owl:ObjectProperty.} \
+      UNION {?dtProp a owl:DatatypeProperty.}\
+      UNION {?indiv a owl:NamedIndividual.} \
+      UNION {?annot a owl:AnnotationProperty.} \
+      UNION {?cls a rdfs:Class. FILTER(!isBlank(?cls))} \
+      UNION {?cls a owl:Class. FILTER(!isBlank(?cls))} \
+	    UNION {?rdfProperty a rdf:Property.}	  \
+      }          filter (!contains(str(?g),?instance))} \
+      UNION { \
+     ?s a vmo:VoColInstance; \
+       ?p ?o . \
+       FILTER contains(str(?o),'Running' )\
+     FILTER NOT EXISTS { GRAPH ?g { ?s a vmo:VoColInstance. } } \
+     FILTER NOT EXISTS { ?s vmo:hasPrivateAccess true . }  \
+     }}";
+
+    ///////////////////////////////////////////////////////////////////
+    // test to add barChar for top visits of instances 
+    //////////////////////////////////////////////////////////////////
+    var labelData = ['rami', 'fhir', 'iaSiS'];
+    var barData = [110, 50, 30];
+    var graphColors = [];
+    var graphOutlines = [];
+    var hoverColor = [];
+    var i = 0;
+    while (i <= barData.length) {
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+        var graphBackground = "rgb(" + randomR + ", " + randomG + ", " + randomB +
+            ")";
+        graphColors.push(graphBackground);
+        var graphOutline = "rgb(" + (randomR - 80) + ", " + (randomG - 80) + ", " +
+            (randomB - 80) + ")";
+        graphOutlines.push(graphOutline);
+        var hoverColors = "rgb(" + (randomR + 25) + ", " + (randomG + 25) + ", " +
+            (randomB + 25) + ")";
+        hoverColor.push(hoverColors);
+        i++;
+    };
+
+    // string to hold table content
+    var Metadata = "";
+    Metadata += '<tr><td class="td_content"> Ontologies</td><td class="right aligned">' +
+        "5" + '</td></tr>';
+    Metadata += '<tr><td class="td_content"> List of Ontologies </td><td class="right aligned">' +
+        "ins1, ins2, ins3, sto" +
+        '</td></tr>';;
+    $("#response").append(Metadata);
+
+    $("#coverScreen").show();
+
+    // query to find all the named graphs in SPARQL-endpoint
+    getPrivateandStoppedAccessInstances().then(function (res) {
+        allNamedGraphsQuery = 'SELECT DISTINCT ?g ' +
+            'WHERE {' +
+            '  GRAPH ?g { ?s ?p ?o }'
+        toBeHiddenInstances = res
+        if (toBeHiddenInstances.length > 0)
+            for (let k in toBeHiddenInstances)
+                allNamedGraphsQuery += 'FILTER( !contains(str(?g), "/' + toBeHiddenInstances[k] +
+                    '/") ) '
+        allNamedGraphsQuery += '}';
+    })
+
+    var searchme = $('#selectOntology')
+    $('#listOntologyOnSearch')
+        .search({
+            searchOnFocus: false,
+            searchDelay: 500,
+            apiSettings: {
+                beforeSend: function (settings) {
+                    settings.type = 'post';
+                    settings.url = './datalunes/query';
+                    settings.data = {
+                        query: encodeURIComponent(allNamedGraphsQuery)
+                    };
+                    settings.Accept = "application/sparql-results+json;charset=UTF-8";
+                    settings.dataType = "json";
+                    return settings;
+                },
+                onResponse: function (response) {
+                    var convertedResponse = {
+                        results: []
+                    };
+                    var graphs = response.results.bindings;
+                    var graphLists = [];
+
+                    // translate response to work with search
+                    for (let i = 0; i < graphs.length; i++) {
+                        if (graphs[i]["g"].value) {
+                            let stringIncludesInstnace = graphs[i]["g"].value.split("datalunes/")[1];
+                            let instanceName = stringIncludesInstnace.split('/')[0];
+                            let stringIncludesBranch = graphs[i]["g"].value.split(instanceName + "/")[
+                                1];
+                            let branchName = stringIncludesBranch.split('/')[0];
+                            if (instanceName.includes(searchme[0].value)) {
+                                graphLists.push({
+                                    title: instanceName
+                                });
+                                graphListsWithBranches.push({
+                                    "instance": instanceName,
+                                    "branch": branchName
+                                });
+                            }
+                        }
+                    }
+                    if (graphLists) {
+                        const uniqueGraphs = [...new Set(graphLists.map(obj => obj.title))]
+                        // filter instances with same instanceName and branchName
+                        graphListsWithBranches = graphListsWithBranches.filter((graphListsWithBranches,
+                            index, self) =>
+                            index === self.findIndex((t) => (t.instance === graphListsWithBranches
+                                .instance &&
+                                t.branch ===
+                                graphListsWithBranches.branch)))
+                        // translate response to work with search
+                        $.each(uniqueGraphs, function (index, item) {
+                            // add result to category
+                            convertedResponse.results.push({
+                                title: item,
+                            });
+                        });
+                    }
+                    return convertedResponse;
+                },
+            },
+            onSelect: function (result) {
+                // do something with result.id or whatever
+                if (result)
+                    if (result.hasOwnProperty('title')) {
+                        let selectedOntology = result.title
+                        var availableBranch = '';
+                        // iterate over each element in the array
+                        for (var i = 0; i < graphListsWithBranches.length; i++) {
+                            // look for the entry with a matching `code` value
+                            if (graphListsWithBranches[i].instance == selectedOntology) {
+                                availableBranch = graphListsWithBranches[i].branch;
+                                break;
+                            }
+                        }
+                        window.location.href = document.URL.split('#')[0] + 'home/' + selectedOntology +
+                            '/' +
+                            availableBranch;
+                    }
+            }
+        });
+
+    // get Statistics of all the included instances 
+    $.ajax({
+        type: 'POST',
+        data: {
+            query: encodeURIComponent(statisticsQuery)
+        },
+        url: './sparqlServer/query',
+        headers: {
+            Accept: 'application/sparql-results+json;charset=UTF-8'
+        },
+        success: function (data, response, jqXHR) {
+            // Show the HTML for the Google homepage.
+            if (data != null) {
+                var result = JSON.parse(data).results.bindings;
+                if (result[0] != null) {
+                    // string to hold table content
+                    Statistics += '<tr><td class="td_content"> Instances </td><td class="right aligned">' +
+                        result[0].Instances.value + '</td></tr>';
+                    Statistics += '<tr><td class="td_content"> Classes</td><td class="right aligned">' +
+                        result[0].Classes.value + '</td></tr>';
+                    Statistics +=
+                        '<tr><td class="td_content"> RDF Properties </td><td class="right aligned">' +
+                        result[0].RDF_Property.value +
+                        '</td></tr>';
+                    Statistics +=
+                        '<tr><td class="td_content"> OWL ObjectProperties	 </td><td class="right aligned">' +
+                        result[0].OWL_ObjectProperty.value +
+                        '</td></tr>';
+                    Statistics +=
+                        '<tr><td class="td_content"> OWL DatatypeProperties	 </td><td class="right aligned">' +
+                        result[0].OWL_DatatypeProperty.value + '</td></tr>'
+                    Statistics +=
+                        '<tr><td class="td_content"> OWL AnnotationProperties	 </td><td class="right aligned">' +
+                        result[0].OWL_AnnotationProperty.value + '</td></tr>'
+                    Statistics +=
+                        '<tr><td class="td_content"> Individuals	 </td><td class="right aligned">' +
+                        result[0].Individuals.value + '</td></tr>';
+                    $("#metaData").append(Statistics);
+
+                }
+            } else {
+                console.warn(response);
+            }
+        }
+    });
+
+    // looking for an concept 
+    $("#listConceptOnSearch").on("click", function () {
+        //selectedOntology = getValue();
+        //search_term();
+        if ($('#listConceptOnSearch').search('get value')) {
+        //document.getElementById('search_results').innerHTML="El resultado de la busqueda ira aqui";
+            //window.location.href = "./search?" + $('#listConceptOnSearch').search('get value')
+            //searchTermDatasets('');
+        }
+    });
+
+    var searchMe = $('#searchConcept')
+    // query to get searchedConcepts
+    var searchedConcepts = function () {
+        let query = "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
+            " PREFIX  afn:  <http://jena.apache.org/ARQ/function#> " +
+            " PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+            " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+            " SELECT DISTINCT ?subject ?localname ?label ?comment ?g ?name	 " +
+            "  WHERE { GRAPH ?g { { {?subject ?p ?o ." +
+            "  OPTIONAL{?subject rdfs:label ?label .} " +
+            "  OPTIONAL{?subject rdfs:comment ?comment .} " +
+            "  FILTER(!isBlank(?subject)) FILTER(contains(afn:localname(?subject),\"" + searchMe[0]
+                .value +
+            "\"))        BIND (afn:localname(?subject) as ?localname )} " +
+            "}}"
+        if (toBeHiddenInstances.length > 0)
+            for (let k in toBeHiddenInstances)
+                query += 'FILTER( !contains(str(?g), "/' + toBeHiddenInstances[k] +
+                    '/") ) '
+        query += "} limit " + limitQueryValue
+        return query
+
+    }
+
+    // query to get searchedConcepts
+    var searchedConceptsQuery = function () {
+        let queryResult = "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
+            " PREFIX  afn:  <http://jena.apache.org/ARQ/function#> " +
+            " PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+            " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+            " SELECT DISTINCT ?subject ?localname ?label ?comment ?g ?name	 " +
+            "  WHERE { GRAPH ?g { { {?subject ?p ?o ." +
+            "  OPTIONAL{?subject rdfs:label ?label .} " +
+            "  OPTIONAL{?subject rdfs:comment ?comment .} " +
+            "  FILTER(!isBlank(?subject)) FILTER(contains(afn:localname(?subject),\"" + searchMe[0]
+                .value +
+            "\"))        BIND (afn:localname(?subject) as ?localname )} " +
+            " union{ ?subject ?p ?o . " +
+            " OPTIONAL{?subject rdfs:label ?label .}  " +
+            " FILTER(!isBlank(?subject)) FILTER(contains(?label,\"" + searchMe[0].value + "\")) " +
+            " BIND (?label as ?localname )}" +
+            "}}";
+        if (toBeHiddenInstances.length > 0)
+            for (let k in toBeHiddenInstances)
+                queryResult += 'FILTER( !contains(str(?g), "/' + toBeHiddenInstances[k] +
+                    '/") ) '
+        queryResult += "} limit " + limitQueryValue
+        return queryResult;
+    }
+    
+
+    var searchTermQuery = function () {
+        let queryResult = "Prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> "
+                + "select distinct ?concept ?label where {" +
+            "   ?concept a <http://www.w3.org/2002/07/owl#Class> ." +
+            "   ?concept rdfs:label ?label ." +
+            "   FILTER(regex(?label, \""+searchMe[0].value+"\", \"i\")) ." +
+            "   FILTER(langMatches(lang(?label),\"EN\")) ." +
+            "} LIMIT 100"
+            
+        return queryResult;
+    }
+
+    $('#listConceptOnSearch')
+        .search({
+            minCharacters: 3,
+            searchOnFocus: false,
+            searchDelay: 500,
+            apiSettings: {
+                beforeSend: function (settings) {
+                    settings.type = 'post';
+                    settings.data = {
+                        query: searchTermQuery()
+                    };
+                    //settings.url = './sparqlServer/query';
+                    settings.url = './fuseki/saref_ontology/sparql';
+                    settings.Accept = "application/sparql-results+json;charset=UTF-8";
+                    settings.dataType = "json";
+                    return settings;
+
+                },
+                onResponse: function (response) {
+                    var convertedResponse = {
+                        results: []
+                    };
+                    var data = response.results.bindings;
+                    // translate response to work with search
+                    $.each(data, function (index, item) {
+                        // add result to category
+                        convertedResponse.results.push({
+                            title: item.concept.value+"- saref_ontology",
+                        });
+                    });
+                    return convertedResponse;
+                },
+            },
+        });
+        
+    function searchTermDatasets(datasetName)
+    {
+    	var response={
+    	results:[]
+    	}
+    	
+    	var endpoint = "./fuseki/"+datasetName+"/sparql?query=";
+    	
+	var querystring = encodeURIComponent(searchTermQuery());
+	$.ajax({
+	type: 'GET',
+	url: endpoint + querystring,
+	headers: {
+	Accept: 'application/sparql-results+json;charset=UTF-8'
+	},
+	success: function(data, textStatus, jqXHR) {
+	var instances = data.results.bindings;
+	if (instances[0] != null) {
+	 console.log('DENTRO DE SUCCESS');
+	  var instancesTable = '<table class="ui pink table" style="table-layout:fixed;>' +
+	    '<colgroup> <col class="col-md-4"> </colgroup>' +
+	    '<tr>' +
+	    '<th>Individuals</th>' +
+	    '</tr>';
+	  for (var i = 0; i < instances.length; i++) {
+	  	response.results.push({
+                            title: instances[i].concept.value+"-"+datasetName,
+                        });
+	  }
+	
+	} 	  
+	}
+	});
+
+	return response;
+    }
+    
+    function searchTermDatasetsRETURN(datasetName)
+    {
+    	
+    	return new Promise(function (resolve, reject) {
+            $.ajax({
+                type: 'get',
+                data: {
+                    query: searchTermQuery()
+                },
+                url: './fuseki/'+datasetName+'/sparql',
+                accept: 'application/sparql-results+json;charset=UTF-8',
+                success: function (data, response) {
+                    if (data) {
+                    var response_list={
+		    	results:[]
+		    	}
+		    	console.log('VALOR DEVUELTO='+data.results.bindings);
+                    	var instances = data.results.bindings;
+			if (instances[0] != null) {
+	 			console.log('DENTRO DE SUCCESS');
+
+	  			for (var i = 0; i < instances.length; i++) {
+	  			response_list.results.push({
+                            		title: instances[i].concept.value+"-"+datasetName,
+                        		});
+	  			}
+	  		}
+                    
+                        resolve(response_list);
+                    } else {
+                    	console.log('NO VALOR DEVUELTO');
+                        console.warn(response);
+                        reject(response);
+                    }
+                }
+            });
+        });
+    	
+    }
+
+    function getPrivateandStoppedAccessInstances() {
+        let getPrivateandStoppedInstancesQuery = 'PREFIX vmo:   <http://vocol.fraunhofer.de/vmo/>  PREFIX  afn:  <http://jena.apache.org/ARQ/function#> \
+                                                            select distinct (afn:localname(?s) as ?instance ) \
+                                                            where {   \
+                                                            {?s a  vmo:VoColInstance; \
+                                                            vmo:instanceStatus ?instaceStatus; \
+                                                            filter(afn:localname(?instaceStatus) = "Stopped")} \
+                                                            union{ \
+                                                            ?s a  vmo:VoColInstance; \
+                                                            vmo:hasPrivateAccess ?privateAccess . \
+                                                            }} ';
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                type: 'POST',
+                data: {
+                    query: encodeURIComponent(getPrivateandStoppedInstancesQuery)
+                },
+                url: './sparqlServer/query',
+                success: function (data, response, jqXHR) {
+                    if (data) {
+                        let result = JSON.parse(data).results.bindings;
+                        let instanceList = [];
+                        for (let i in result)
+                            if (result[i].hasOwnProperty('instance'))
+                                instanceList.push(result[i].instance.value)
+                        resolve(instanceList);
+                    } else {
+                        console.warn(response);
+                        reject(response);
+                    }
+                }
+            });
+        });
+    }
+</script>
+</body>

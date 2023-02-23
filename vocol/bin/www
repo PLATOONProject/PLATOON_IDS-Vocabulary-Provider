@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+var app = require('../app');
+var shell = require('shelljs');
+var fs = require('fs');
+
+//app.set('port', process.argv.slice(2)[0] || 3000);
+
+var webPort = process.argv.slice(2)[0] || 3000;
+var sparqlEndpointPort = process.argv.slice(2)[1] || 3030;
+
+/*var server = app.listen(webPort, function() {
+  console.log('VoCol server is running on port ' + server.address().port + '\nJena Fuseki server is running on port ' + sparqlEndpointPort);
+});*/
+
+//server.timeout = 1000 * 60 * 10; // 10 minutes
+var server = app.listen(webPort, function () {
+    var repoFolderPath = "../db";
+    if (!fs.existsSync(repoFolderPath)) {
+      shell.cd('..', {
+        silent: false
+      }).stdout;
+      shell.exec('mkdir  db', {
+        silent: false
+      }).stdout;
+      shell.cd('vocol', {
+        silent: false
+      }).stdout;
+  
+    }
+    setTimeout(function() {
+      console.log('\n\nVoCol server is running on port ' + server.address().port + '\nJena Fuseki server is running on port ' + sparqlEndpointPort);
+  }, 3000);
+  });
